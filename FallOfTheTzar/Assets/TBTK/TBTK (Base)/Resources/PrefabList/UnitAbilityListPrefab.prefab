@@ -1,0 +1,1801 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: UnitAbilityListPrefab
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8206048, y: -5.41175175, z: .113845825}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff593e30fc3726c4d9f0b81727577a68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitAbilityList:
+  - ID: 0
+    name: AimShot
+    desp: Increase both attack and critical by 30% instantly for 1 round.
+    icon: {fileID: 2800000, guid: ffe40b30a97e58a46bfe5832bc3b43cc, type: 3}
+    iconName: Precision
+    effectType: 2
+    effectAttrs:
+    - type: 8
+      useDefaultDamageValue: 1
+      value: .300000012
+      valueAlt: 0
+      duration: 1
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 10
+      useDefaultDamageValue: 1
+      value: .300000012
+      valueAlt: 0
+      duration: 1
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
+    iconUnavailableName: Precision_BW
+    targetType: 1
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .99000001
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 100000, guid: 50d3342e1a04986449c489f00c843b5d, type: 2}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    soundHit: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 1
+    name: RapidFire
+    desp: Gain an extra attack at the cost of -15% attack instantly for 1 round.
+    icon: {fileID: 2800000, guid: 619f297bf6c0c7841bbebf4bd95da11c, type: 3}
+    iconName: FistUp
+    effectType: 2
+    effectAttrs:
+    - type: 12
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 8
+      useDefaultDamageValue: 1
+      value: -.150000006
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 37aeaa16491307d48a9f293eb6851063, type: 3}
+    iconUnavailableName: FistUp_BW
+    targetType: 1
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 100000, guid: 9ecee654621729b4eaee2d06f7faa564, type: 2}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 2
+    name: MassRepair
+    desp: Repair all friendly unit within 2 tiles by 4-7HP.
+    icon: {fileID: 2800000, guid: e40d139ee7de36e4197db2cc876e5f14, type: 3}
+    iconName: HealMultiBlue
+    effectType: 0
+    effectAttrs:
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 5
+      valueAlt: 7
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: bbcf2309854caa64c8246affca2ea014, type: 3}
+    iconUnavailableName: HealMulti_BW
+    targetType: 1
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 2
+    range: 1
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 100002, guid: 0b6348a0a924bfa48ae7b28a852d6fb6, type: 2}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 3
+    name: Fortify
+    desp: 'Deploy a fortification on the occupied tile.
+
+      Any unit in the tile will gain 30 defense.
+
+
+      Last 3 rounds.'
+    icon: {fileID: 2800000, guid: 0b1642ee73b61f144b255ef6d8cd2358, type: 3}
+    iconName: Shield
+    effectType: 2
+    effectAttrs:
+    - type: 9
+      useDefaultDamageValue: 1
+      value: .300000012
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: ee080e6f009e68f48bf4697922188195, type: 3}
+    iconUnavailableName: Shield_BW
+    targetType: 3
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 1
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100012, guid: d6ffb73374c0dc64fb1ce3229dbdb15b, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 4
+    name: Barrage
+    desp: "Fire a barrage of shell towards an area, causing 8 damage to all unit within
+      it \n\nCause friendly-fire, use with care"
+    icon: {fileID: 2800000, guid: c5c3664d9b6f58748843c089cf675f1d, type: 3}
+    iconName: BombDrop
+    effectType: 1
+    effectAttrs:
+    - type: 0
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 2
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 400ac1cc5a4d64a44b190c3751527987, type: 3}
+    iconUnavailableName: BombDrop_BW
+    targetType: 0
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 1
+    missChance: 0
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 1
+    range: 6
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 1
+    shootObject: {fileID: 100000, guid: 0c0921e55d1d147939ab415aa2c04375, type: 2}
+  - ID: 5
+    name: StasisField
+    desp: 'Create a stasis field that prevent the target unit from doing any action.
+
+
+      Last 3 rounds.'
+    icon: {fileID: 2800000, guid: 3fd2a244e57f04e44a1671cf34021c70, type: 3}
+    iconName: Whirl
+    effectType: 3
+    effectAttrs:
+    - type: 14
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 5282754fce7597a42bcbe7f858b5f1e2, type: 3}
+    iconUnavailableName: Whirl_BW
+    targetType: 2
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100000, guid: eedd0a7e08745bc42a1fa5b16a95b883, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 6
+    name: Boost
+    desp: 'Gain 2 extra movement range.
+
+
+      last 3 rounds'
+    icon: {fileID: 2800000, guid: 61284de7a45ab1944bf71533bb8eb475, type: 3}
+    iconName: Boost
+    effectType: 0
+    effectAttrs:
+    - type: 5
+      useDefaultDamageValue: 1
+      value: 2
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: c9ad22dc8af86fb49ab5a393d7f1dc82, type: 3}
+    iconUnavailableName: Boost_BW
+    targetType: 0
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 1
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 8
+    name: Radar
+    desp: 'Decrease defend of all hostile units within an area by 20.
+
+      Decrease critical immunity of the targets by 15%.
+
+
+      Last 2 rounds.'
+    icon: {fileID: 2800000, guid: c11036c6461dbb44ebfa9ba3f4fe1d66, type: 3}
+    iconName: Radar
+    effectType: 3
+    effectAttrs:
+    - type: 9
+      useDefaultDamageValue: 1
+      value: -.200000003
+      valueAlt: 0
+      duration: 2
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 10
+      useDefaultDamageValue: 1
+      value: -.150000006
+      valueAlt: 0
+      duration: 2
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 56975bb3eadc1ca4383c787cf39d8b82, type: 3}
+    iconUnavailableName: Radar_BW
+    targetType: 2
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 2
+    range: 5
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 9
+    name: ForceFire
+    desp: Fire in a specific direction, damaging all unit in line of fire.
+    icon: {fileID: 2800000, guid: 63040ee1cc5408c4ca7f50b0c9cfa606, type: 3}
+    iconName: Strike
+    effectType: 1
+    effectAttrs:
+    - type: 0
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 15ac241eb29c4fb45949cc86e26bfb2a, type: 3}
+    iconUnavailableName: Strike_BW
+    targetType: 0
+    requireTargetSelection: 1
+    enableMovementAfter: 0
+    enableAttackAfter: 0
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 1
+    enableAOE: 0
+    aoeRange: 1
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 2
+    shootObject: {fileID: 0}
+  - ID: 10
+    name: SelfDestruct
+    desp: 'Causing a big explosion, damage all surrounding unit within 2 tiles
+
+'
+    icon: {fileID: 2800000, guid: f5d63c73f602e9247bec474767e63f93, type: 3}
+    iconName: Radioactive
+    effectType: 1
+    effectAttrs:
+    - type: 0
+      useDefaultDamageValue: 0
+      value: 500
+      valueAlt: 1000
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 8a705af3ec94cec46bcb2e211a471bf6, type: 3}
+    iconUnavailableName: Radioactive_BW
+    targetType: 0
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 07000000
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 0
+    range: 3
+    cost: 2
+    totalCost: 4
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 11
+    name: Repair
+    desp: Repair a friendly unit for 7-10 HP.
+    icon: {fileID: 2800000, guid: 490ff756a323b1749966bd8817525a20, type: 3}
+    iconName: Spanner
+    effectType: 2
+    effectAttrs:
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 7
+      valueAlt: 10
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 6d67c8615f0ddd44386b7a99114acba3, type: 3}
+    iconUnavailableName: Spanner_BW
+    targetType: 1
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 2
+    cost: 1
+    totalCost: 1
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100002, guid: 39053d0317684e642b49f35de327190f, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 12
+    name: Counter
+    desp: Gain extra counter attack for the next 2 round
+    icon: {fileID: 2800000, guid: e29addbb4dd1cb94789d8e28df218f5d, type: 3}
+    iconName: SkullLightning
+    effectType: 2
+    effectAttrs:
+    - type: 13
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 2
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: f9d0ddac8327cc2448d95d6e87f79003, type: 3}
+    iconUnavailableName: SkullLightning_BW
+    targetType: 1
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 7
+    name: SelfDestChain
+    desp: Gain extra counter attack for the next 2 round
+    icon: {fileID: 0}
+    iconName: 
+    effectType: 1
+    effectAttrs:
+    - type: 0
+      useDefaultDamageValue: 0
+      value: 5
+      valueAlt: 15
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 14
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 0}
+    iconUnavailableName: 
+    targetType: 0
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 1
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 2
+    range: 1
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 1
+    shootObject: {fileID: 0}
+  - ID: 13
+    name: BuildTurret
+    desp: Deploy a MG unit that cannot move, last throughout the battle
+    icon: {fileID: 2800000, guid: 225fce85d33e93546bd88b651ce6bf69, type: 3}
+    iconName: MGTower
+    effectType: 0
+    effectAttrs:
+    - type: 20
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: -1
+      damageType: 0
+      cd: 0
+      unit: {fileID: 11400000, guid: 2b0af0198e64f4840a074d7332510746, type: 2}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 95ec6e70da734e549b72bb8b352e35f2, type: 3}
+    iconUnavailableName: MGTower_BW
+    targetType: 4
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: 1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 14
+    name: Teleport
+    desp: Instantly teleport to any empty tile within range
+    icon: {fileID: 2800000, guid: 3fd2a244e57f04e44a1671cf34021c70, type: 3}
+    iconName: Whirl
+    effectType: 0
+    effectAttrs:
+    - type: 19
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 5282754fce7597a42bcbe7f858b5f1e2, type: 3}
+    iconUnavailableName: Whirl_BW
+    targetType: 4
+    requireTargetSelection: 1
+    enableMovementAfter: 0
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 5
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 15
+    name: Hack
+    desp: 'Hack a target and gain direct control of it.
+
+      Hacked target suffers a -20% hit chance.'
+    icon: {fileID: 2800000, guid: 7bf8c67051015ea42ad3deb4091c7f3a, type: 3}
+    iconName: EnergyPlus
+    effectType: 3
+    effectAttrs:
+    - type: 21
+      useDefaultDamageValue: 1
+      value: 75
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 8
+      useDefaultDamageValue: 0
+      value: -.200000003
+      valueAlt: 1
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
+    iconUnavailableName: EnergyPlus_BW
+    targetType: 2
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 1
+    failChance: 1
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 5
+    cost: 2
+    totalCost: 2
+    cdDuration: 3
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100000, guid: b10da3a434de3da459c5ef29f81952d4, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 17
+    name: Barricade
+    desp: 'Create a stasis field that prevent the target unit from moving.
+
+
+      Last 3 rounds.'
+    icon: {fileID: 2800000, guid: 3fd2a244e57f04e44a1671cf34021c70, type: 3}
+    iconName: Whirl
+    effectType: 3
+    effectAttrs:
+    - type: 5
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 5282754fce7597a42bcbe7f858b5f1e2, type: 3}
+    iconUnavailableName: Whirl_BW
+    targetType: 2
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100000, guid: eedd0a7e08745bc42a1fa5b16a95b883, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 16
+    name: Blink
+    desp: Instantly teleport to any empty tile within range
+    icon: {fileID: 2800000, guid: 3fd2a244e57f04e44a1671cf34021c70, type: 3}
+    iconName: Whirl
+    effectType: 0
+    effectAttrs:
+    - type: 19
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 5282754fce7597a42bcbe7f858b5f1e2, type: 3}
+    iconUnavailableName: Whirl_BW
+    targetType: 4
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 1
+    failChance: .200000003
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 1
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 18
+    name: Sprint
+    desp: 'Gain 2 extra movement range.
+
+
+      last 3 rounds'
+    icon: {fileID: 2800000, guid: 61284de7a45ab1944bf71533bb8eb475, type: 3}
+    iconName: Boost
+    effectType: 0
+    effectAttrs:
+    - type: 5
+      useDefaultDamageValue: 1
+      value: -2
+      valueAlt: 0
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: c9ad22dc8af86fb49ab5a393d7f1dc82, type: 3}
+    iconUnavailableName: Boost_BW
+    targetType: 0
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 1
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 19
+    name: Create Outpost
+    desp: 'Make a defensive outpost, extends to all hexes
+
+      adjacent to the currently occupied one.
+
+      Any unit in the affected tiles will gain 20 defense
+
+      and regenerate some health.
+
+
+      Last 3 rounds.'
+    icon: {fileID: 2800000, guid: 0b1642ee73b61f144b255ef6d8cd2358, type: 3}
+    iconName: Shield
+    effectType: 2
+    effectAttrs:
+    - type: 9
+      useDefaultDamageValue: 1
+      value: .200000003
+      valueAlt: 0
+      duration: 99
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 2
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: ee080e6f009e68f48bf4697922188195, type: 3}
+    iconUnavailableName: Shield_BW
+    targetType: 3
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 1
+    cost: 6
+    totalCost: 6
+    cdDuration: 4
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100012, guid: d6ffb73374c0dc64fb1ce3229dbdb15b, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 20
+    name: Over Drive
+    desp: Gain an extra attack this round at the cost of 2 hit points.
+    icon: {fileID: 2800000, guid: 619f297bf6c0c7841bbebf4bd95da11c, type: 3}
+    iconName: FistUp
+    effectType: 2
+    effectAttrs:
+    - type: 12
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 0
+      useDefaultDamageValue: 0
+      value: 2
+      valueAlt: 2
+      duration: 0
+      damageType: 7
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 37aeaa16491307d48a9f293eb6851063, type: 3}
+    iconUnavailableName: FistUp_BW
+    targetType: 1
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 100000, guid: 9ecee654621729b4eaee2d06f7faa564, type: 2}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 21
+    name: Focus
+    desp: Gain HP and AP at the cost of losing your remaining attacks and movement
+      oppurtunities for this turn.
+    icon: {fileID: 2800000, guid: c03c72978d15ecb4d91060d3a10d14f0, type: 3}
+    iconName: gui_reticle
+    effectType: 0
+    effectAttrs:
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 6
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 3
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 8
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 0}
+    iconUnavailableName: 
+    targetType: 0
+    requireTargetSelection: 0
+    enableMovementAfter: 0
+    enableAttackAfter: 0
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 1
+    cost: 1
+    totalCost: 1
+    cdDuration: 4
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 22
+    name: Inspire Aim
+    desp: Increase both attack and critical of nearby units by 30% instantly for 1
+      round.
+    icon: {fileID: 2800000, guid: ffe40b30a97e58a46bfe5832bc3b43cc, type: 3}
+    iconName: Precision
+    effectType: 2
+    effectAttrs:
+    - type: 8
+      useDefaultDamageValue: 1
+      value: .300000012
+      valueAlt: 0
+      duration: 1
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 10
+      useDefaultDamageValue: 1
+      value: .300000012
+      valueAlt: 0
+      duration: 1
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
+    iconUnavailableName: Precision_BW
+    targetType: 1
+    requireTargetSelection: 0
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .99000001
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 5
+    range: 3
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 100000, guid: 50d3342e1a04986449c489f00c843b5d, type: 2}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    soundHit: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 23
+    name: Sabotage Movement
+    desp: 'Create a stasis field that prevent the target unit from doing any action.
+      Also does some damage
+
+
+      Last 4 rounds.'
+    icon: {fileID: 2800000, guid: 3fd2a244e57f04e44a1671cf34021c70, type: 3}
+    iconName: Whirl
+    effectType: 3
+    effectAttrs:
+    - type: 14
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 4
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 0
+      useDefaultDamageValue: 0
+      value: 1
+      valueAlt: 2
+      duration: 0
+      damageType: 7
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 5282754fce7597a42bcbe7f858b5f1e2, type: 3}
+    iconUnavailableName: Whirl_BW
+    targetType: 0
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 1
+    missChance: .100000001
+    stackMissWithDodge: 1
+    canFail: 1
+    failChance: .0500000007
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 4
+    cost: 4
+    totalCost: 4
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100000, guid: eedd0a7e08745bc42a1fa5b16a95b883, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 24
+    name: Multishot
+    desp: Fire in a specific direction, damaging all unit in cone of fire, and draining
+      a lot of AP.
+    icon: {fileID: 2800000, guid: 63040ee1cc5408c4ca7f50b0c9cfa606, type: 3}
+    iconName: Strike
+    effectType: 1
+    effectAttrs:
+    - type: 0
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 2
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 4
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 15ac241eb29c4fb45949cc86e26bfb2a, type: 3}
+    iconUnavailableName: Strike_BW
+    targetType: 0
+    requireTargetSelection: 1
+    enableMovementAfter: 0
+    enableAttackAfter: 0
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 2
+    enableAOE: 0
+    aoeRange: 1
+    range: 3
+    cost: 3
+    totalCost: 3
+    cdDuration: 5
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 2
+    shootObject: {fileID: 0}
+  - ID: 25
+    name: Heal
+    desp: Heal a friendly unit for 7-10 HP, plus a small amount afterwards.
+    icon: {fileID: 2800000, guid: 490ff756a323b1749966bd8817525a20, type: 3}
+    iconName: Spanner
+    effectType: 2
+    effectAttrs:
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 7
+      valueAlt: 10
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 1
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 2
+      duration: 3
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 6d67c8615f0ddd44386b7a99114acba3, type: 3}
+    iconUnavailableName: Spanner_BW
+    targetType: 1
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 2
+    cost: 1
+    totalCost: 1
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 100002, guid: 39053d0317684e642b49f35de327190f, type: 2}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 26
+    name: Disable
+    desp: Prevents teh affected unit from using an ability for five turns
+    icon: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
+    iconName: EnergyPlus_BW
+    effectType: 3
+    effectAttrs:
+    - type: 17
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 5
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 0}
+    iconUnavailableName: 
+    targetType: 2
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 4
+    cost: 3
+    totalCost: 3
+    cdDuration: 8
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 27
+    name: Knockout
+    desp: 'Knockout an enemy preventing it form doing anythingg for two turns.
+
+      You cannot attck after using this ability'
+    icon: {fileID: 2800000, guid: 62b151a4dc286dc4c8a1b62ccbaf944c, type: 3}
+    iconName: Skull
+    effectType: 3
+    effectAttrs:
+    - type: 14
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 0
+      duration: 2
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 0}
+    iconUnavailableName: 
+    targetType: 0
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 0
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 1
+    range: 3
+    cost: 4
+    totalCost: 4
+    cdDuration: 8
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 28
+    name: Hunker Down
+    desp: 'Makes it much harder for you to be hit for a turn.
+
+      YOu cannot move or attack after using this ability'
+    icon: {fileID: 2800000, guid: 43e8e281154d7ba4fba0a56a2472580e, type: 3}
+    iconName: Shield_Full
+    effectType: 2
+    effectAttrs:
+    - type: 9
+      useDefaultDamageValue: 1
+      value: .850000024
+      valueAlt: 0
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 0}
+    iconUnavailableName: 
+    targetType: 0
+    requireTargetSelection: 0
+    enableMovementAfter: 0
+    enableAttackAfter: 0
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 0
+    aoeRange: 0
+    range: 3
+    cost: 3
+    totalCost: 3
+    cdDuration: 7
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 29
+    name: Rallying Speech
+    desp: 'Give a rallying speech to your troops. Units within effect radius gain
+      an
+
+      amount of AP from 1-10'
+    icon: {fileID: 2800000, guid: c83fe8a783f0a044fad59d186bbf6a52, type: 3}
+    iconName: DollarMultiUP
+    effectType: 0
+    effectAttrs:
+    - type: 3
+      useDefaultDamageValue: 1
+      value: 1
+      valueAlt: 10
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 0}
+    iconUnavailableName: 
+    targetType: 1
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 0
+    missChance: .150000006
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 2
+    enableAOE: 0
+    aoeRange: 4
+    range: 5
+    cost: 5
+    totalCost: 5
+    cdDuration: 4
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 0
+    shootObject: {fileID: 0}
+  - ID: 31
+    name: Bombardment
+    desp: 'Fire a barrage of shell towards an area, causing damage to both health
+      and AP for all units within the radius
+
+
+      Cause friendly-fire, use with care'
+    icon: {fileID: 2800000, guid: c5c3664d9b6f58748843c089cf675f1d, type: 3}
+    iconName: BombDrop
+    effectType: 1
+    effectAttrs:
+    - type: 0
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 0
+      duration: 0
+      damageType: 2
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    - type: 2
+      useDefaultDamageValue: 1
+      value: 0
+      valueAlt: 4
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 400ac1cc5a4d64a44b190c3751527987, type: 3}
+    iconUnavailableName: BombDrop_BW
+    targetType: 0
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 1
+    missChance: 0
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 0
+    enableAOE: 1
+    aoeRange: 1
+    range: 6
+    cost: 2
+    totalCost: 2
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 1
+    shootObject: {fileID: 100000, guid: 0c0921e55d1d147939ab415aa2c04375, type: 2}
+  - ID: 30
+    name: AP sap
+    desp: Take AP away from units in a cone in front of the unit.
+    icon: {fileID: 2800000, guid: bfd06380f68e7a64a903f01d5d64312b, type: 3}
+    iconName: DollarTimed
+    effectType: 1
+    effectAttrs:
+    - type: 2
+      useDefaultDamageValue: 1
+      value: 4
+      valueAlt: 8
+      duration: 0
+      damageType: 0
+      cd: 0
+      unit: {fileID: 0}
+      collectible: {fileID: 0}
+    countTillNextTurn: 1
+    iconUnavailable: {fileID: 2800000, guid: 400ac1cc5a4d64a44b190c3751527987, type: 3}
+    iconUnavailableName: BombDrop_BW
+    targetType: 2
+    requireTargetSelection: 1
+    enableMovementAfter: 1
+    enableAttackAfter: 1
+    factionID: 0
+    canMiss: 1
+    missChance: 0
+    stackMissWithDodge: 1
+    canFail: 0
+    failChance: .150000006
+    chainedAbilityIDList: 
+    targetArea: 2
+    enableAOE: 1
+    aoeRange: 1
+    range: 6
+    cost: 4
+    totalCost: 4
+    cdDuration: 2
+    cooldown: 0
+    useLimit: -1
+    useCount: 0
+    delay: 0
+    effectUse: {fileID: 0}
+    effectTarget: {fileID: 0}
+    effectUseDelay: 0
+    effectTargetDelay: 0
+    soundUse: {fileID: 0}
+    soundHit: {fileID: 0}
+    shootMode: 1
+    shootObject: {fileID: 100000, guid: 0c0921e55d1d147939ab415aa2c04375, type: 2}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

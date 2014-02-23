@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 33: {fileID: 3300000}
+  - 23: {fileID: 2300000}
+  - 65: {fileID: 6500000}
+  - 114: {fileID: 11400000}
+  m_Layer: 8
+  m_Name: SquareTile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: 14.9059877, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!23 &2300000
+Renderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 2100000, guid: 01785fe56419b124d9ad9b0edeef2136, type: 2}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_SortingLayerID: 0
+--- !u!33 &3300000
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Mesh: {fileID: 4300000, guid: 70537066fb8a0334abeac087cf7e3d2a, type: 3}
+--- !u!65 &6500000
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52e989a42fb95aa4b8e1a536e446180e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  walkable: 1
+  unit: {fileID: 0}
+  state: 0
+  obstacle: {fileID: 0}
+  matNormal: {fileID: 2100000, guid: 01785fe56419b124d9ad9b0edeef2136, type: 2}
+  matWalkable: {fileID: 2100000, guid: ef4c7c12bc532d142860feebf8d60e88, type: 2}
+  matUnwalkable: {fileID: 2100000, guid: 7f730beb02ad2424ead972ba17756089, type: 2}
+  matHostile: {fileID: 2100000, guid: c49b2ba66e68d894b94025968488fae2, type: 2}
+  matAbilityRange: {fileID: 2100000, guid: 25de9cff66269494a9eaf574f8b34c01, type: 2}
+  thisT: {fileID: 0}
+  pos: {x: 0, y: 0, z: 0}
+  neighbours: []
+  disconnectedNeighbour: []
+  parent: {fileID: 0}
+  listState: 0
+  scoreG: 0
+  scoreH: 0
+  scoreF: 0
+  tempScoreG: 0
+  collectible: {fileID: 0}
+  attackableToSelected: 0
+  walkableToSelected: 0
+  openForPlacement: 0
+  placementID: -1
+  HPGainModifier: 0
+  APGainModifier: 0
+  damageModifier: 0
+  attRangeModifier: 0
+  attackModifier: 0
+  defendModifier: 0
+  criticalModifier: 0
+  critDefModifier: 0
+  sightModifier: 0
+  activeUnitAbilityEffectList: []
+  cover: 
+  overlayPos: []
+  wall: []
+  AIHostileList: []
+  walls: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1
