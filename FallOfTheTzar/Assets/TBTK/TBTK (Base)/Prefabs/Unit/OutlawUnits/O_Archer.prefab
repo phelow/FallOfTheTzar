@@ -504,8 +504,11 @@ MonoBehaviour:
   iconName: ArtilleryTower
   prefabID: 11
   unitName: Outlaw Archer
-  desp: Stationary artillery unit, extremely long range and packs a punch but cant
-    move
+  desp: 'Outlaw Archer:
+
+
+    The archer can hit units 7 to 10 hexagons away. The archer is strong against militia,
+    and weak against calvalry.'
   factionID: 0
   faction:
     factionID: -1
@@ -530,10 +533,10 @@ MonoBehaviour:
   APGainMax: 1
   turnPriority: 2
   movementRange: 4
-  sight: 10
+  sight: 15
   movePerTurn: 1
   moveRemain: 1
-  attackPerTurn: 1
+  attackPerTurn: 2
   attackRemain: 1
   counterPerTurn: 1
   counterAttackRemain: 1
@@ -542,10 +545,10 @@ MonoBehaviour:
   damageTypeMelee: 0
   damageTypeRange: 5
   attackRangeMelee: 1
-  attackRangeMin: 3
-  attackRangeMax: 8
-  rangeDamageMin: 2
-  rangeDamageMax: 6
+  attackRangeMin: 7
+  attackRangeMax: 10
+  rangeDamageMin: 3
+  rangeDamageMax: 4
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5

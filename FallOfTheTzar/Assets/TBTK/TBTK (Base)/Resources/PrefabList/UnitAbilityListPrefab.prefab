@@ -1043,7 +1043,7 @@ MonoBehaviour:
     useLimit: -1
     useCount: 0
     delay: 0
-    effectUse: {fileID: 0}
+    effectUse: {fileID: 100000, guid: e5ae65130ed0a2049a74428b744bd725, type: 2}
     effectTarget: {fileID: 0}
     effectUseDelay: 0
     effectTargetDelay: 0
@@ -1227,7 +1227,7 @@ MonoBehaviour:
     useLimit: -1
     useCount: 0
     delay: 0
-    effectUse: {fileID: 0}
+    effectUse: {fileID: 100000, guid: 8f3474b605d9bd94d8ced4a892b66c17, type: 2}
     effectTarget: {fileID: 0}
     effectUseDelay: 0
     effectTargetDelay: 0
@@ -1265,7 +1265,7 @@ MonoBehaviour:
     iconUnavailable: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
     iconUnavailableName: Precision_BW
     targetType: 1
-    requireTargetSelection: 0
+    requireTargetSelection: 1
     enableMovementAfter: 1
     enableAttackAfter: 1
     factionID: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     canFail: 0
     failChance: .99000001
     chainedAbilityIDList: 
-    targetArea: 0
+    targetArea: 2
     enableAOE: 0
     aoeRange: 5
     range: 3
@@ -1286,8 +1286,8 @@ MonoBehaviour:
     useLimit: -1
     useCount: 0
     delay: 0
-    effectUse: {fileID: 100000, guid: 50d3342e1a04986449c489f00c843b5d, type: 2}
-    effectTarget: {fileID: 0}
+    effectUse: {fileID: 100000, guid: 8f3474b605d9bd94d8ced4a892b66c17, type: 2}
+    effectTarget: {fileID: 100000, guid: 50d3342e1a04986449c489f00c843b5d, type: 2}
     effectUseDelay: 0
     effectTargetDelay: 0
     soundUse: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
@@ -1349,13 +1349,13 @@ MonoBehaviour:
     useCount: 0
     delay: 0
     effectUse: {fileID: 0}
-    effectTarget: {fileID: 100000, guid: eedd0a7e08745bc42a1fa5b16a95b883, type: 2}
+    effectTarget: {fileID: 0}
     effectUseDelay: 0
     effectTargetDelay: 0
     soundUse: {fileID: 0}
     soundHit: {fileID: 8300000, guid: 34dff954bd2971e4bb8e6a6135c1bf4f, type: 3}
-    shootMode: 0
-    shootObject: {fileID: 0}
+    shootMode: 2
+    shootObject: {fileID: 100000, guid: 6a8206f1f7ed23c4a96cc6c8db97aeeb, type: 2}
   - ID: 24
     name: Multishot
     desp: Fire in a specific direction, damaging all unit in cone of fire, and draining
@@ -1475,7 +1475,7 @@ MonoBehaviour:
     shootObject: {fileID: 0}
   - ID: 26
     name: Disable
-    desp: Prevents teh affected unit from using an ability for five turns
+    desp: Prevents the affected unit from using an ability for five turns
     icon: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
     iconName: EnergyPlus_BW
     effectType: 3
@@ -1515,7 +1515,7 @@ MonoBehaviour:
     useCount: 0
     delay: 0
     effectUse: {fileID: 0}
-    effectTarget: {fileID: 0}
+    effectTarget: {fileID: 100000, guid: b10da3a434de3da459c5ef29f81952d4, type: 2}
     effectUseDelay: 0
     effectTargetDelay: 0
     soundUse: {fileID: 0}
@@ -1524,7 +1524,7 @@ MonoBehaviour:
     shootObject: {fileID: 0}
   - ID: 27
     name: Knockout
-    desp: 'Knockout an enemy preventing it form doing anythingg for two turns.
+    desp: 'Knockout an enemy preventing it form doing anything for two turns.
 
       You cannot attck after using this ability'
     icon: {fileID: 2800000, guid: 62b151a4dc286dc4c8a1b62ccbaf944c, type: 3}
@@ -1543,7 +1543,7 @@ MonoBehaviour:
     countTillNextTurn: 1
     iconUnavailable: {fileID: 0}
     iconUnavailableName: 
-    targetType: 0
+    targetType: 2
     requireTargetSelection: 1
     enableMovementAfter: 1
     enableAttackAfter: 0
@@ -1557,7 +1557,7 @@ MonoBehaviour:
     targetArea: 0
     enableAOE: 0
     aoeRange: 1
-    range: 3
+    range: 1
     cost: 4
     totalCost: 4
     cdDuration: 8
@@ -1571,8 +1571,8 @@ MonoBehaviour:
     effectTargetDelay: 0
     soundUse: {fileID: 0}
     soundHit: {fileID: 0}
-    shootMode: 0
-    shootObject: {fileID: 0}
+    shootMode: 1
+    shootObject: {fileID: 100000, guid: 6a8206f1f7ed23c4a96cc6c8db97aeeb, type: 2}
   - ID: 28
     name: Hunker Down
     desp: 'Makes it much harder for you to be hit for a turn.
@@ -1616,7 +1616,7 @@ MonoBehaviour:
     useLimit: -1
     useCount: 0
     delay: 0
-    effectUse: {fileID: 0}
+    effectUse: {fileID: 100000, guid: fbe687e29bfb5e6499a60957a57fc7f6, type: 2}
     effectTarget: {fileID: 0}
     effectUseDelay: 0
     effectTargetDelay: 0
@@ -1669,7 +1669,7 @@ MonoBehaviour:
     useCount: 0
     delay: 0
     effectUse: {fileID: 0}
-    effectTarget: {fileID: 0}
+    effectTarget: {fileID: 100000, guid: 9a391a79cd9ee414e96634ff15170df7, type: 2}
     effectUseDelay: 0
     effectTargetDelay: 0
     soundUse: {fileID: 0}
@@ -1785,8 +1785,8 @@ MonoBehaviour:
     effectTargetDelay: 0
     soundUse: {fileID: 0}
     soundHit: {fileID: 0}
-    shootMode: 1
-    shootObject: {fileID: 100000, guid: 0c0921e55d1d147939ab415aa2c04375, type: 2}
+    shootMode: 2
+    shootObject: {fileID: 100000, guid: 21632fb9df90c80458805a1d143e4d30, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

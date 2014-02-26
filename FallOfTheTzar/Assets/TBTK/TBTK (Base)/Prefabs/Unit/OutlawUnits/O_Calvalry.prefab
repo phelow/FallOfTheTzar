@@ -348,7 +348,11 @@ MonoBehaviour:
   iconName: Icon_Creep_RocketLauncher
   prefabID: 12
   unitName: Outlaw Calvalry
-  desp: light-weight rocket launcher. Long-range and high mobility.
+  desp: 'Outlaw Calvalry:
+
+
+    This unit is fast moving and deadly at close range. It is deadly against archers,
+    but weak against Militia.'
   factionID: 0
   faction:
     factionID: -1
@@ -372,8 +376,8 @@ MonoBehaviour:
   APGainMin: 1
   APGainMax: 1
   turnPriority: 4
-  movementRange: 6
-  sight: 10
+  movementRange: 10
+  sight: 7
   movePerTurn: 1
   moveRemain: 1
   attackPerTurn: 1
@@ -386,7 +390,7 @@ MonoBehaviour:
   damageTypeRange: 4
   attackRangeMelee: 1
   attackRangeMin: 0
-  attackRangeMax: 4
+  attackRangeMax: 3
   rangeDamageMin: 2
   rangeDamageMax: 6
   meleeDamageMin: 2
