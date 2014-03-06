@@ -1,0 +1,595 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+SceneSettings:
+  m_ObjectHideFlags: 0
+  m_PVSData: 
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: .25
+    backfaceThreshold: 100
+--- !u!104 &2
+RenderSettings:
+  m_Fog: 0
+  m_FogColor: {r: .5, g: .5, b: .5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: .00999999978
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientLight: {r: .200000003, g: .200000003, b: .200000003, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: .5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 0}
+  m_ObjectHideFlags: 0
+--- !u!127 &3
+LevelGameManager:
+  m_ObjectHideFlags: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  m_LightProbes: {fileID: 0}
+  m_Lightmaps: []
+  m_LightmapsMode: 1
+  m_BakedColorSpace: 0
+  m_UseDualLightmapsInForward: 0
+  m_LightmapEditorSettings:
+    m_Resolution: 50
+    m_LastUsedResolution: 0
+    m_TextureWidth: 1024
+    m_TextureHeight: 1024
+    m_BounceBoost: 1
+    m_BounceIntensity: 1
+    m_SkyLightColor: {r: .860000014, g: .930000007, b: 1, a: 1}
+    m_SkyLightIntensity: 0
+    m_Quality: 0
+    m_Bounces: 1
+    m_FinalGatherRays: 1000
+    m_FinalGatherContrastThreshold: .0500000007
+    m_FinalGatherGradientThreshold: 0
+    m_FinalGatherInterpolationPoints: 15
+    m_AOAmount: 0
+    m_AOMaxDistance: .100000001
+    m_AOContrast: 1
+    m_LODSurfaceMappingDistance: 1
+    m_Padding: 0
+    m_TextureCompression: 0
+    m_LockAtlas: 0
+--- !u!196 &5
+NavMeshSettings:
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    agentRadius: .5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: .400000006
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    accuratePlacement: 0
+    minRegionArea: 2
+    widthInaccuracy: 16.666666
+    heightInaccuracy: 10
+  m_NavMesh: {fileID: 0}
+--- !u!1 &1737463763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1737463764}
+  - 114: {fileID: 1737463767}
+  - 114: {fileID: 1737463766}
+  - 114: {fileID: 1737463765}
+  m_Layer: 0
+  m_Name: UI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1737463764
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737463763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.46530187, y: .461174577, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1737463765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737463763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 870f595085c72f04588677e56c06037c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadMode: 0
+  startingPlayerPoint: 25
+  mainMenu: DemoMenu
+  nextScene: 
+  randomNextScene: 1
+  nextScenes:
+  - ExContBasic
+  - ExContSpace
+  - ExContTropic
+--- !u!114 &1737463766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737463763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba5ef6e3a4cd95644a37767af37a716f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  availableUnits:
+  - {fileID: 11400000, guid: 3cc1172d99dfe3147922a5752a2506aa, type: 2}
+  - {fileID: 11400000, guid: 10f765daf1dbbdc469caafbd0602bb71, type: 2}
+  - {fileID: 11400000, guid: e8c6a841aa70b274ba4c276011469e8c, type: 2}
+  - {fileID: 11400000, guid: 1ada1c2b5e509b440ba282e3240ae116, type: 2}
+  - {fileID: 11400000, guid: ee1219ef00a147646a5460fe6aa42ec2, type: 2}
+  unitAbilityList: []
+--- !u!114 &1737463767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1737463763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72017dab36eef254f82ad1f87f233d75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+--- !u!1 &1973946889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1973946890}
+  - 114: {fileID: 1973946891}
+  m_Layer: 0
+  m_Name: PerkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1973946890
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973946889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.46530187, y: .461174577, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &1973946891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973946889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c76f88da0a23eb4dac0477d4c3ac3ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  localPerkList:
+  - ID: 0
+    name: More HP
+    desp: All units gain 25% more hit point
+    icon: {fileID: 2800000, guid: 02cc2fc8e035d6c4796a2e288fcdce5e, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: 02cc2fc8e035d6c4796a2e288fcdce5e, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 357dc9e8c99f3fa4d99c49f34c230d61, type: 3}
+    iconName: HeartPlus_BW
+    iconUnavailableName: HeartPlus_BW
+    iconUnlockedName: HeartPlus
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 0
+      value: .25
+      isModifier: 1
+    prereq: 
+    reqby: 01000000
+    applyToAllUnit: 0
+    unitPrefab: []
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 1
+    name: Regeneration
+    desp: All unit will regenerate 2HP per round but have their total HP decrease
+      by 4
+    icon: {fileID: 2800000, guid: bbcf2309854caa64c8246affca2ea014, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: bbcf2309854caa64c8246affca2ea014, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 03d998d294dfc0f48b0390dcbf468f4e, type: 3}
+    iconName: HealMulti_BW
+    iconUnavailableName: HealMulti_BW
+    iconUnlockedName: HealMultiRed
+    cost: 2
+    pointReq: 0
+    effects:
+    - type: 2
+      value: 2
+      isModifier: 0
+    - type: 0
+      value: -4
+      isModifier: 0
+    prereq: 00000000
+    reqby: 02000000
+    applyToAllUnit: 1
+    unitPrefab:
+    - {fileID: 11400000, guid: 3cc1172d99dfe3147922a5752a2506aa, type: 2}
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 2
+    name: HyperActive
+    desp: All Units gain 2 additional AP
+    icon: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 7bf8c67051015ea42ad3deb4091c7f3a, type: 3}
+    iconName: EnergyPlus_BW
+    iconUnavailableName: EnergyPlus_BW
+    iconUnlockedName: EnergyPlus
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 1
+      value: 2
+      isModifier: 0
+    prereq: 
+    reqby: 03000000
+    applyToAllUnit: 1
+    unitPrefab: []
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 3
+    name: HyperActive II
+    desp: All Units gain 2 more AP and have their AP cost for attack reduce by 1
+    icon: {fileID: 2800000, guid: 829ecdeb52eee97458305f0de7c6fc7e, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: 829ecdeb52eee97458305f0de7c6fc7e, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 565f64409a363e1498de49554e39c9b7, type: 3}
+    iconName: EnergyDouble_BW
+    iconUnavailableName: EnergyDouble_BW
+    iconUnlockedName: EnergyDouble
+    cost: 2
+    pointReq: 0
+    effects:
+    - type: 1
+      value: 2
+      isModifier: 0
+    - type: 26
+      value: 1
+      isModifier: 0
+    prereq: 02000000
+    reqby: 
+    applyToAllUnit: 1
+    unitPrefab: []
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 4
+    name: MeleeExpert
+    desp: All melee attack have 10% more chance to hit and 25% more chance to score
+      a critical
+    icon: {fileID: 2800000, guid: 37aeaa16491307d48a9f293eb6851063, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: 37aeaa16491307d48a9f293eb6851063, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 619f297bf6c0c7841bbebf4bd95da11c, type: 3}
+    iconName: FistUp_BW
+    iconUnavailableName: FistUp_BW
+    iconUnlockedName: FistUp
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 19
+      value: .25
+      isModifier: 0
+    - type: 17
+      value: .100000001
+      isModifier: 0
+    prereq: 
+    reqby: 06000000
+    applyToAllUnit: 1
+    unitPrefab: []
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 5
+    name: RangeExpert
+    desp: All range attack have 10% more chance to hit and 25% more chance to score
+      a critical
+    icon: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: ffe40b30a97e58a46bfe5832bc3b43cc, type: 3}
+    iconName: Precision_BW
+    iconUnavailableName: Precision_BW
+    iconUnlockedName: Precision
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 18
+      value: .25
+      isModifier: 0
+    - type: 16
+      value: .100000001
+      isModifier: 0
+    prereq: 
+    reqby: 06000000
+    applyToAllUnit: 1
+    unitPrefab: []
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 6
+    name: Expertist
+    desp: "All unit gain +10% to hit chance \nAll successful attack deal 4 additional
+      damage"
+    icon: {fileID: 2800000, guid: c9ad22dc8af86fb49ab5a393d7f1dc82, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: c9ad22dc8af86fb49ab5a393d7f1dc82, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 61284de7a45ab1944bf71533bb8eb475, type: 3}
+    iconName: Boost_BW
+    iconUnavailableName: Boost_BW
+    iconUnlockedName: Boost
+    cost: 2
+    pointReq: 0
+    effects:
+    - type: 6
+      value: 4
+      isModifier: 0
+    - type: 16
+      value: .100000001
+      isModifier: 0
+    - type: 17
+      value: .100000001
+      isModifier: 0
+    prereq: 0400000005000000
+    reqby: 
+    applyToAllUnit: 1
+    unitPrefab:
+    - {fileID: 11400000, guid: 3cc1172d99dfe3147922a5752a2506aa, type: 2}
+    - {fileID: 11400000, guid: 10f765daf1dbbdc469caafbd0602bb71, type: 2}
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 7
+    name: TriggerHappy
+    desp: All artillery unit gets one more additional attack per round but suffer
+      -10% to hit chance
+    icon: {fileID: 2800000, guid: 01ceb6cb99228a84793d98311c0e5358, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: 01ceb6cb99228a84793d98311c0e5358, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: e7db6ef0569c06644b991afab304e800, type: 3}
+    iconName: RadarPlus_BW
+    iconUnavailableName: RadarPlus_BW
+    iconUnlockedName: RadarPlus
+    cost: 2
+    pointReq: 0
+    effects:
+    - type: 21
+      value: 1
+      isModifier: 0
+    - type: 16
+      value: -.100000001
+      isModifier: 0
+    prereq: 
+    reqby: 00000000
+    applyToAllUnit: 0
+    unitPrefab:
+    - {fileID: 11400000, guid: ee1219ef00a147646a5460fe6aa42ec2, type: 2}
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 8
+    name: Toughness
+    desp: Guardian will be immuned to critical hit and take 1 less damage in any attack
+    icon: {fileID: 2800000, guid: ee080e6f009e68f48bf4697922188195, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: ee080e6f009e68f48bf4697922188195, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 0b1642ee73b61f144b255ef6d8cd2358, type: 3}
+    iconName: Shield_BW
+    iconUnavailableName: Shield_BW
+    iconUnlockedName: Shield
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 24
+      value: 5
+      isModifier: 0
+    - type: 25
+      value: 1
+      isModifier: 0
+    prereq: 
+    reqby: 09000000
+    applyToAllUnit: 0
+    unitPrefab:
+    - {fileID: 11400000, guid: 10f765daf1dbbdc469caafbd0602bb71, type: 2}
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 9
+    name: ActiveDefence
+    desp: Guardian gain 1 more counter attack move.
+    icon: {fileID: 2800000, guid: 4134454e86ae29641ad75b2624d6aa7b, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: 4134454e86ae29641ad75b2624d6aa7b, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 3ac56cd9b7f4ca842a2fea17d98ff45e, type: 3}
+    iconName: ArmorBreak_BW
+    iconUnavailableName: ArmorBreak_BW
+    iconUnlockedName: ArmorBreak
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 22
+      value: 1
+      isModifier: 0
+    prereq: 08000000
+    reqby: 
+    applyToAllUnit: 0
+    unitPrefab:
+    - {fileID: 11400000, guid: 10f765daf1dbbdc469caafbd0602bb71, type: 2}
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 10
+    name: Mobility
+    desp: Support gains 1 additional movement range but suffer -15% to hit chance
+    icon: {fileID: 2800000, guid: 8bb21947cb5537548a07c646e09c65de, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: 8bb21947cb5537548a07c646e09c65de, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: 68ffc5145b47d4c46ac793a80ef0b9f6, type: 3}
+    iconName: SpeedUp_BW
+    iconUnavailableName: SpeedUp_BW
+    iconUnlockedName: SpeedUp
+    cost: 1
+    pointReq: 0
+    effects:
+    - type: 16
+      value: -.150000006
+      isModifier: 0
+    - type: 4
+      value: 1
+      isModifier: 0
+    prereq: 
+    reqby: 
+    applyToAllUnit: 0
+    unitPrefab:
+    - {fileID: 11400000, guid: 1ada1c2b5e509b440ba282e3240ae116, type: 2}
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  - ID: 11
+    name: Marksman
+    desp: All attacks has 15% more chance to hit
+    icon: {fileID: 2800000, guid: f9d0ddac8327cc2448d95d6e87f79003, type: 3}
+    iconUnavailable: {fileID: 2800000, guid: f9d0ddac8327cc2448d95d6e87f79003, type: 3}
+    iconUnlocked: {fileID: 2800000, guid: e29addbb4dd1cb94789d8e28df218f5d, type: 3}
+    iconName: SkullLightning_BW
+    iconUnavailableName: SkullLightning_BW
+    iconUnlockedName: SkullLightning
+    cost: 2
+    pointReq: 0
+    effects:
+    - type: 16
+      value: .150000006
+      isModifier: 0
+    - type: 17
+      value: .150000006
+      isModifier: 0
+    prereq: 
+    reqby: 
+    applyToAllUnit: 1
+    unitPrefab: []
+    unitPrefabID: 
+    unlocked: 0
+    availableInScene: 1
+    startingState: 0
+  point: 0
+  dontDestroyOnLoad: 1
+  usePersistentData: 1
+--- !u!1 &2042468460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2042468461}
+  - 20: {fileID: 2042468462}
+  - 92: {fileID: 2042468464}
+  - 124: {fileID: 2042468465}
+  - 81: {fileID: 2042468463}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2042468461
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042468460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!20 &2042468462
+Camera:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042468460}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: .656716406, g: .656716406, b: .656716406, a: .0196078438}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: .300000012
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 100
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_HDR: 0
+  m_OcclusionCulling: 1
+--- !u!81 &2042468463
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042468460}
+  m_Enabled: 1
+--- !u!92 &2042468464
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042468460}
+  m_Enabled: 1
+--- !u!124 &2042468465
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042468460}
+  m_Enabled: 1
