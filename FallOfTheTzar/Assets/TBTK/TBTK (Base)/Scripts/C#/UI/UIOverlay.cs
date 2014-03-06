@@ -1,3 +1,5 @@
+#define ibox
+//ibox is short for infobox
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -142,16 +144,24 @@ public class UIOverlay : MonoBehaviour {
 			GUI.DrawTexture(new Rect(startPosX-14, startPosY-4, 13, 13), UI.texBar);
 			
 			GUI.color=Color.white;
+
 		}
 		
 		if(tileHovered!=null) DrawHoverInfo();
-		
+		///Draw text box with selected unit health and AP
+		#if ibox
+		if(UnitControl.selectedUnit != null){
+			UnitTB selectedUnit=UnitControl.selectedUnit;
+			string name =selectedUnit.unitName;
+			GUI.Label(new Rect(Screen.width/2-250, 0, 500, 20), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain);
+		}
+		#endif
 		
 	}
 	
 	void DrawHoverInfo(){
 		UnitTB selectedUnit=UnitControl.selectedUnit;
-		
+
 		if(tileHovered.attackableToSelected){
 			UnitTB unit=tileHovered.unit;
 		
