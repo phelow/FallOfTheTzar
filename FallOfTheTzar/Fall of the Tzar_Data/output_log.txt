@@ -13,7 +13,31 @@ Platform assembly: C:\Users\Devin\Documents\FallOfTheTzar\FallOfTheTzar\Fall of 
 Loading C:\Users\Devin\Documents\FallOfTheTzar\FallOfTheTzar\Fall of the Tzar_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\Devin\Documents\FallOfTheTzar\FallOfTheTzar\Fall of the Tzar_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Devin\Documents\FallOfTheTzar\FallOfTheTzar\Fall of the Tzar_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.063 seconds
+- Completed reload, in  0.255 seconds
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+CurrentLevel:LevelOne
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 0.732334 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2995.
+Total: 2.305497 ms (FindLiveObjects: 0.101896 ms CreateObjectMapping: 0.029322 ms MarkObjects: 0.941991 ms  DeleteObjects: 0.027490 ms)
+
+CurrentLevel set to:LevelOne
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 39.669594 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 37 unused Assets to reduce memory usage. Loaded Objects now: 2998.
+Total: 2.486199 ms (FindLiveObjects: 0.101529 ms CreateObjectMapping: 0.035553 ms MarkObjects: 1.599920 ms  DeleteObjects: 0.071474 ms)
+
+CurrentLevel set to:LevelOne
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
