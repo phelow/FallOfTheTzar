@@ -1,3 +1,5 @@
+#define ibox
+
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -548,7 +550,7 @@ public class UnitTB : MonoBehaviour {
 		
 		actionQueued=0;
 	}
-	
+
 	public void UpdateAttackerList(){
 		for(int i=0; i<attackerList.Count; i++){
 			if(attackerList[i].roundSinceLastAttack>5 || attackerList[i].unit==null){
@@ -1480,6 +1482,71 @@ public class UnitTB : MonoBehaviour {
 		
 		return false;
 	}
+
+#if ibox
+	public bool AreAllActionsCompleted(){ //custom version of method, slightly different, does not account for unused attacks if they are out of range
+		//for different ruleset in which ap is used for either movement or attack
+		bool movementRuleFlag=(GameControlTB.MovementAPCostRule()!=_MovementAPCostRule.None);
+		bool attackRuleFlag=(GameControlTB.AttackAPCostRule()!=_AttackAPCostRule.None);
+		
+		if(movementRuleFlag && attackRuleFlag && AP<=0) return true;
+		if(movementRuleFlag && AP<=0) moved=true;
+		if(attackRuleFlag && AP<=0) attacked=true;
+		if(AP<=0 && moved && attacked) return true; 
+		
+		
+		//typical check where ap is not used for both movement or attack
+		bool allowAbAfterAttack=GameControlTB.AllowAbilityAfterAttack();
+		bool allowMoveAfterAttack=GameControlTB.AllowMovementAfterAttack();
+		
+		bool abilityFlag=IsAllAbilityDisabled();
+
+		bool validTarget = false;
+		
+		//determine if enemies are within range
+		for(int i=0; i<attackerList.Count; i++){
+			if(attackerList[i].unit==null){
+				attackerList.RemoveAt(i);
+				i-=1;
+			}
+		}
+		for(int i=0; i<attackerList.Count; i++){
+			float dist=Vector3.Distance(attackerList[i].unit.thisT.position, thisT.position);
+			if(dist<this.attackRangeMax && dist> this.attackRangeMax){
+				validTarget =true;
+				break;
+			}
+		}
+
+		//unit ability is disable for AI for now
+		if(!GameControlTB.IsPlayerFaction(factionID)) abilityFlag=true;
+		
+		if(allowAbAfterAttack && allowMoveAfterAttack){
+			return moved & (attacked|(!validTarget&moved)) & abilityFlag;
+		}
+		else if(!allowAbAfterAttack && allowMoveAfterAttack){
+			if((attacked|(!validTarget&moved))){
+				return moved;
+			}
+			else{
+				return moved & (attacked|(!validTarget&moved));
+			}
+		}
+		else if(allowAbAfterAttack && !allowMoveAfterAttack){
+			if((attacked|(!validTarget&moved))){
+				return abilityFlag;
+			}
+			else{
+				return abilityFlag & (attacked|(!validTarget&moved));
+			}
+		}
+		else if(!allowAbAfterAttack && !allowMoveAfterAttack){
+			return (attacked|(!validTarget&moved));
+		}
+		
+		return false;
+	}
+#endif
 	//function call to check if all ability is disabled
 	public bool IsAllAbilityDisabled(){
 		if(stun>0 || abilityDisabled>0) return true;
