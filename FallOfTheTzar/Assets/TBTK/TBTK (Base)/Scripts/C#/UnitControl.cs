@@ -1,3 +1,4 @@
+#define ibox
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -93,15 +94,23 @@ public class UnitControl : MonoBehaviour {
 		}
 		
 		currentUnitTurnID=-1;
-	}
-	
-	// Use this for initialization
-	void Start () {
+#if ibox
 		if(playerUnits==null || playerUnits.Count==0){
 			playerUnits=new List<PlayerUnits>();
 			playerUnits.Add(new PlayerUnits(GameControlTB.instance.playerFactionID[0]));
 		}
-		
+#endif
+	}
+	
+	// Use this for initialization
+	void Start () {
+#if ibox
+#else
+		if(playerUnits==null || playerUnits.Count==0){
+			playerUnits=new List<PlayerUnits>();
+			playerUnits.Add(new PlayerUnits(GameControlTB.instance.playerFactionID[0]));
+		}
+#endif
 		if(GameControlTB.LoadMode()==_LoadMode.UsePersistantData){
 			if(!GlobalStatsTB.loaded){ GlobalStatsTB.Init(); }
 			

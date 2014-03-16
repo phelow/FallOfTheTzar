@@ -10,7 +10,9 @@ public class LevelTracker : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(!levelSet){
+#if DEBUG
 			Debug.Log("CurrentLevel set to:"+Application.loadedLevelName);
+#endif
 			PlayerPrefs.SetString("CurrentLevel",Application.loadedLevelName);
 			levelSet = true;
 		}
