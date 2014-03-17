@@ -1,5 +1,5 @@
 #define ibox
-//ibox is short for infobox
+//ibox is short for infobox, it is a suite of interface tools to make the interface easier to read
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +8,14 @@ public class UIOverlay : MonoBehaviour {
 
 	//public Texture tex;
 	//private bool battleStarted=false;
-	
+#if ibox
+	public float idleUnits = 0;	//number of idle units for the person currently playing
+	public List<UnitTB> p_units;	//list of player units
+	private float totalUnits;
+	private int p_factionId;	//player faction id
+	public float waitTime = 3.0f;		//TODO: change to private once a reasonable time is found
+	public float lastCheck;
+#endif
 	List<EffectOverlay> effectOverlayList=new List<EffectOverlay>();
 	
 	void Awake(){
@@ -17,7 +24,16 @@ public class UIOverlay : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-	
+#if ibox
+		//get the faction id
+		GameControlTB gctb = GameObject.Find("GameControl").GetComponent<GameControlTB>();
+		List<int> factionIds = gctb.playerFactionID;
+		p_factionId = factionIds[0];
+		p_units = UnitControl.GetAllUnitsOfFaction(p_factionId);
+		totalUnits = p_units.Count;
+		idleUnits = totalUnits;
+
+#endif
 	}
 	
 	void OnEnable(){
@@ -150,10 +166,42 @@ public class UIOverlay : MonoBehaviour {
 		if(tileHovered!=null) DrawHoverInfo();
 		///Draw text box with selected unit health and AP
 		#if ibox
-		if(UnitControl.selectedUnit != null){
+		if(UnitControl.selectedUnit != null){ //only perform this calculation once every second
+			//get the selected unit
 			UnitTB selectedUnit=UnitControl.selectedUnit;
 			string name =selectedUnit.unitName;
+
+			//print unit information
 			GUI.Label(new Rect(Screen.width/2-250, 0, 500, 20), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain);
+				if(lastCheck >= waitTime){
+				lastCheck = 0;
+				idleUnits = totalUnits;
+				//get idle units
+					//get an array of their units
+					p_units = UnitControl.GetAllUnitsOfFaction(p_factionId);
+					//loop through the array
+				foreach(UnitTB unit in p_units){
+					if(unit.AreAllActionsCompleted()){
+						idleUnits--;
+					}
+					else if(false){ //TODO: if the unit has no more moves, cannot use an ability, and cannot attack anyone
+
+					}
+					//if a unit has moves left, or attacks left, increment idle units
+				}
+
+			}
+			else{
+				lastCheck+=Time.deltaTime;
+			}
+			//print idle information
+			if(idleUnits ==0){
+				GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20), "All units have exhausted their moves, hit the next turn.");
+			}
+			else{
+				GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20),idleUnits + "/"+ totalUnits + " units still have available actions.");
+			}
+
 		}
 		#endif
 		
