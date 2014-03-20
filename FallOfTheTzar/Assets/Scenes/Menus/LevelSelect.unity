@@ -225,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8a669828f1e1d4593de5cfb516071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customSkin: {fileID: 11400000, guid: 67a334a737561f14aa8bc6beacd65b18, type: 2}
   tooltip:
   - Play Level One
   - Return to the main menu
@@ -274,6 +275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1faac11fac07896478b6bf55dae72bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customSkin: {fileID: 11400000, guid: ed6bd083c7f015b4a90117a6a6e0f310, type: 2}
   menu: 1
-  label1: Fall of the Tzar Test Version 1.0
-  label2: ' '
+  label1: Fall of the Tzar Test Version 1
+  WIDTH: 200
+  HEIGHT: 60

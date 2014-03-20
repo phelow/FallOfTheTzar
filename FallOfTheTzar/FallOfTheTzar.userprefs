@@ -1,21 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TBTK\TBTK (Base)\Scripts\Misc\LevelTracker.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIUnitPlacement.cs">
     <Files>
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Misc\FallOfTheTzarMainMenu.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Misc\VersionLabel.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\GridManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\ShootObjectTB.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\Tile.cs" Line="1" Column="1" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UI.cs" Line="1" Column="1" />
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIGameOver.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitTBAnimation.cs" Line="1" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Misc\LevelTracker.cs" Line="3" Column="1" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UI.cs" Line="82" Column="19" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIOverlay.cs" Line="166" Column="33" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitTB.cs" Line="265" Column="25" />
-      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitControl.cs" Line="444" Column="52" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UI.cs" Line="1" Column="1" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Misc\FallOfTheTzarMainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Dialogue System\Examples\Feature Demo\FeatureDemo.cs" Line="1" Column="1" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIOverlay.cs" Line="1" Column="1" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitControl.cs" Line="1" Column="1" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitTB.cs" Line="1" Column="1" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\Misc\VersionLabel.cs" Line="35" Column="10" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIHUD.cs" Line="68" Column="10" />
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIUnitPlacement.cs" Line="65" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

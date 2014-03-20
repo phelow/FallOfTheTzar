@@ -1,13 +1,17 @@
+#define customSkin
+
 using UnityEngine;
 using System.Collections;
 
 public class FallOfTheTzarMainMenu : MonoBehaviour {
-
+#if customSkin
+	public GUISkin customSkin;
+#endif
 	/// <summary>
 	/// Constants which control the dimensions of a button
 	/// </summary>
-	const int HEIGHT = 120;
-	const int WIDTH = 40;
+	const int HEIGHT = 200;
+	const int WIDTH = 60;
 
 	string currentLevel ="";
 
@@ -38,9 +42,13 @@ public class FallOfTheTzarMainMenu : MonoBehaviour {
 	}
 	
 	void OnGUI(){
+#if customSkin
+		GUI.skin = customSkin;
+
+#endif
 		
 		float startY=Screen.height/2-170;
-		float spaceY=50;
+		float spaceY=80;
 
 			/*GUIContent content=new GUIContent("Mini\nCampaign", "1");
 			if(GUI.Button(new Rect(Screen.width/2-60, startY+=spaceY, 120, 40), content)){
@@ -69,7 +77,7 @@ public class FallOfTheTzarMainMenu : MonoBehaviour {
 
 		for(int i=0; i< menuItems; i++){
 			GUIContent content = new GUIContent (names[i], ""+i);
-			if(GUI.Button(new Rect(Screen.width/2-60, startY+=spaceY, 120, 40), content)){
+			if(GUI.Button(new Rect((int) (Screen.width/2- (1.58*WIDTH)), startY+=spaceY, HEIGHT, WIDTH), content)){
 				if(levelLoad[i] =="Continue"){
 					///if there exists a level to load, load it, otherwise start a new game
 					if(currentLevel.Length > 1){

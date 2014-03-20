@@ -41,7 +41,7 @@ MonoBehaviour:
   perkTBList:
   - ID: 0
     name: More HP
-    desp: All units gain 25% more hit point
+    desp: All units gain 25% more hit points.
     icon: {fileID: 2800000, guid: 02cc2fc8e035d6c4796a2e288fcdce5e, type: 3}
     iconUnavailable: {fileID: 2800000, guid: 02cc2fc8e035d6c4796a2e288fcdce5e, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 357dc9e8c99f3fa4d99c49f34c230d61, type: 3}
@@ -64,8 +64,8 @@ MonoBehaviour:
     startingState: 0
   - ID: 1
     name: Regeneration
-    desp: All unit will regenerate 2HP per round but have their total HP decrease
-      by 4
+    desp: All units will regenerate 2HP per round but have their total HP decrease
+      by 4.
     icon: {fileID: 2800000, guid: bbcf2309854caa64c8246affca2ea014, type: 3}
     iconUnavailable: {fileID: 2800000, guid: bbcf2309854caa64c8246affca2ea014, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 03d998d294dfc0f48b0390dcbf468f4e, type: 3}
@@ -92,7 +92,7 @@ MonoBehaviour:
     startingState: 0
   - ID: 2
     name: HyperActive
-    desp: All Units gain 2 additional AP
+    desp: All Units gain 2 additional AP.
     icon: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
     iconUnavailable: {fileID: 2800000, guid: a9808ee640e1bf24d8dfb3c01be18706, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 7bf8c67051015ea42ad3deb4091c7f3a, type: 3}
@@ -115,7 +115,7 @@ MonoBehaviour:
     startingState: 0
   - ID: 3
     name: HyperActive II
-    desp: All Units gain 2 more AP and have their AP cost for attack reduce by 1
+    desp: All Units gain 2 more AP and have their AP cost for attack reduce by 1.
     icon: {fileID: 2800000, guid: 829ecdeb52eee97458305f0de7c6fc7e, type: 3}
     iconUnavailable: {fileID: 2800000, guid: 829ecdeb52eee97458305f0de7c6fc7e, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 565f64409a363e1498de49554e39c9b7, type: 3}
@@ -141,8 +141,8 @@ MonoBehaviour:
     startingState: 0
   - ID: 4
     name: MeleeExpert
-    desp: All melee attack have 10% more chance to hit and 25% more chance to score
-      a critical
+    desp: All melee attacks have an additional 10% chance to hit and 25% critical
+      chance.
     icon: {fileID: 2800000, guid: 37aeaa16491307d48a9f293eb6851063, type: 3}
     iconUnavailable: {fileID: 2800000, guid: 37aeaa16491307d48a9f293eb6851063, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 619f297bf6c0c7841bbebf4bd95da11c, type: 3}
@@ -168,8 +168,7 @@ MonoBehaviour:
     startingState: 0
   - ID: 5
     name: RangeExpert
-    desp: All range attack have 10% more chance to hit and 25% more chance to score
-      a critical
+    desp: All range attack have 10% more chance to hit and 25% critical chance.
     icon: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
     iconUnavailable: {fileID: 2800000, guid: e4e392c5f9d1c4f4aa673c0d9cc22877, type: 3}
     iconUnlocked: {fileID: 2800000, guid: ffe40b30a97e58a46bfe5832bc3b43cc, type: 3}
@@ -195,8 +194,8 @@ MonoBehaviour:
     startingState: 0
   - ID: 6
     name: Expertist
-    desp: "All unit gain +10% to hit chance \nAll successful attack deal 4 additional
-      damage"
+    desp: "All unit gain +10% to hit chance. \nAll successful attacks deal 4 additional
+      damage."
     icon: {fileID: 2800000, guid: c9ad22dc8af86fb49ab5a393d7f1dc82, type: 3}
     iconUnavailable: {fileID: 2800000, guid: c9ad22dc8af86fb49ab5a393d7f1dc82, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 61284de7a45ab1944bf71533bb8eb475, type: 3}
@@ -227,8 +226,8 @@ MonoBehaviour:
     startingState: 0
   - ID: 7
     name: TriggerHappy
-    desp: All artillery unit gets one more additional attack per round but suffer
-      -10% to hit chance
+    desp: All artillery units gain one more attack per round but suffer -10% to hit
+      chance.
     icon: {fileID: 2800000, guid: 01ceb6cb99228a84793d98311c0e5358, type: 3}
     iconUnavailable: {fileID: 2800000, guid: 01ceb6cb99228a84793d98311c0e5358, type: 3}
     iconUnlocked: {fileID: 2800000, guid: e7db6ef0569c06644b991afab304e800, type: 3}
@@ -255,7 +254,7 @@ MonoBehaviour:
     startingState: 0
   - ID: 8
     name: Toughness
-    desp: Guardian will be immuned to critical hit and take 1 less damage in any attack
+    desp: Guardian will be immuned to critical hit and take 1 less damage in any attack.
     icon: {fileID: 2800000, guid: ee080e6f009e68f48bf4697922188195, type: 3}
     iconUnavailable: {fileID: 2800000, guid: ee080e6f009e68f48bf4697922188195, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 0b1642ee73b61f144b255ef6d8cd2358, type: 3}
@@ -306,7 +305,7 @@ MonoBehaviour:
     startingState: 0
   - ID: 10
     name: Mobility
-    desp: Support gains 1 additional movement range but suffer -15% to hit chance
+    desp: Support gains 1 additional movement range but suffer -15% to hit chance.
     icon: {fileID: 2800000, guid: 8bb21947cb5537548a07c646e09c65de, type: 3}
     iconUnavailable: {fileID: 2800000, guid: 8bb21947cb5537548a07c646e09c65de, type: 3}
     iconUnlocked: {fileID: 2800000, guid: 68ffc5145b47d4c46ac793a80ef0b9f6, type: 3}
@@ -333,7 +332,7 @@ MonoBehaviour:
     startingState: 0
   - ID: 11
     name: Marksman
-    desp: All attacks has 15% more chance to hit
+    desp: All attacks have 15% more chance to hit.
     icon: {fileID: 2800000, guid: f9d0ddac8327cc2448d95d6e87f79003, type: 3}
     iconUnavailable: {fileID: 2800000, guid: f9d0ddac8327cc2448d95d6e87f79003, type: 3}
     iconUnlocked: {fileID: 2800000, guid: e29addbb4dd1cb94789d8e28df218f5d, type: 3}
