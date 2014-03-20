@@ -1,4 +1,5 @@
 #define ibox
+#define customGui
 //ibox is short for infobox, it is a suite of interface tools to make the interface easier to read
 using UnityEngine;
 using System.Collections;
@@ -6,9 +7,14 @@ using System.Collections.Generic;
 
 public class UIOverlay : MonoBehaviour {
 
+	#if customGui
+	public GUISkin customSkin;
+	#endif
+
 	//public Texture tex;
 	//private bool battleStarted=false;
 #if ibox
+	
 	public float idleUnits = 0;	//number of idle units for the person currently playing
 	public List<UnitTB> p_units;	//list of player units
 	private float totalUnits;
@@ -118,7 +124,10 @@ public class UIOverlay : MonoBehaviour {
 	
 	void OnGUI(){
 		//if(!battleStarted) return;
-		
+		#if customGui
+		GUI.skin= Resources.Load("Skins/Fantasy-Colorable") as GUISkin;
+		#endif
+
 		DrawOverlay();
 		
 		List<UnitTB> unitList=UnitControl.GetAllUnit();
@@ -206,6 +215,7 @@ public class UIOverlay : MonoBehaviour {
 		#endif
 		
 	}
+
 	
 	void DrawHoverInfo(){
 		UnitTB selectedUnit=UnitControl.selectedUnit;

@@ -16879,6 +16879,16 @@ Prefab:
       propertyPath: waitTime
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: fa5263bd54f58e74e8b3928b328bd247, type: 2}
+      propertyPath: customSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: 7953503d9e83f8d469b84619849edd4e,
+        type: 2}
+    - target: {fileID: 11400000, guid: fa5263bd54f58e74e8b3928b328bd247, type: 2}
+      propertyPath: customSkin
+      value: 
+      objectReference: {fileID: 11400000, guid: 7953503d9e83f8d469b84619849edd4e,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fa5263bd54f58e74e8b3928b328bd247, type: 2}
   m_RootGameObject: {fileID: 2079869418}
@@ -41702,6 +41712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46598c5321af8e46a067b82cfd0a409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customSkin: {fileID: 11400000, guid: 7953503d9e83f8d469b84619849edd4e, type: 2}
 --- !u!114 &2079869420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41726,6 +41737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ca8bb88b783124da96f28c6862cc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customSkin: {fileID: 0}
   idleUnits: 0
   p_units: []
   waitTime: 3

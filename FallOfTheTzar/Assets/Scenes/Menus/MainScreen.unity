@@ -134,6 +134,7 @@ GameObject:
   - 81: {fileID: 1361602216}
   - 114: {fileID: 1361602219}
   - 114: {fileID: 1361602220}
+  - 114: {fileID: 1361602221}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -225,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a8a669828f1e1d4593de5cfb516071c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customSkin: {fileID: 11400000, guid: 67a334a737561f14aa8bc6beacd65b18, type: 2}
   tooltip:
   - Start a new adventure
   - Continue where you left off
@@ -239,6 +241,17 @@ MonoBehaviour:
   - LevelSelect
   menuItems: 3
   useNGUIScene: 0
+--- !u!114 &1361602221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1361602213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3410b44ae1c49c14ab13919abefc330c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2139999692
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1faac11fac07896478b6bf55dae72bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  customSkin: {fileID: 11400000, guid: 7953503d9e83f8d469b84619849edd4e, type: 2}
   menu: 1
   label1: Fall of the Tzar Test Version 1.0
-  label2: ' '
+  WIDTH: 200
+  HEIGHT: 60

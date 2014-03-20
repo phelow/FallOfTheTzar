@@ -77,7 +77,7 @@ public class UIHUD : MonoBehaviour {
 	}
 	
 	void PlayerHUD(){
-		if(GUI.Button(new Rect(Screen.width-65, Screen.height-65, 60, 60), "Next\nTurn", UI.buttonStyle)){
+		if(GUI.Button(new Rect(Screen.width-100, Screen.height-65, 60, 60), "Next\nTurn", UI.buttonStyle)){
 			OnEndTurnButton();
 		}
 		

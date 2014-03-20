@@ -11,7 +11,7 @@ FancyTop (just an example of using the elements to do a centered header graphic)
 WaxSeal (adds the waxseal and ribbon to the right of the window)
 DeathBadge (adds the iconFrame, skull, and ribbon elements properly aligned)
 
-* /
+*/
 
 var doWindow0 = true;
 var doWindow1 = true;
@@ -243,4 +243,4 @@ if (doWindow3)
 	GUI.BeginGroup (Rect (0,0,100,100));
 	// End the group we started above. This is very important to remember!
 	GUI.EndGroup ();
-}*/
+}
