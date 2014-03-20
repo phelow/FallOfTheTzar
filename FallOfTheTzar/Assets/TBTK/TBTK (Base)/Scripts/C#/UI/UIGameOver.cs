@@ -1,7 +1,11 @@
+#define customGui
 using UnityEngine;
 using System.Collections;
 
 public class UIGameOver : MonoBehaviour {
+#if customGui
+	GUISkin customSkin;
+#endif
 
 	private int vicFactionID=-1;
 	
@@ -64,6 +68,11 @@ public class UIGameOver : MonoBehaviour {
 	
 	private int boxHeight=400;
 	void OnGUI(){
+
+		#if customGui
+		customSkin = (GUISkin)Resources.Load ("NecromancerGUI");;
+		GUI.skin = customSkin;
+		#endif
 		//~ if(vicFactionID<0) return;
 		
 		GUIStyle style=new GUIStyle();

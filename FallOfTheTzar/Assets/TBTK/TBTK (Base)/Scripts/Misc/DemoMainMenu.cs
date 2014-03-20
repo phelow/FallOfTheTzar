@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class DemoMainMenu : MonoBehaviour {
-
+	
 	private string[] tooltip;
 	
 	public bool useNGUIScene=false;
@@ -22,13 +22,13 @@ public class DemoMainMenu : MonoBehaviour {
 		tooltip[4]="A test level showcase the XCom style cover system with fog-of-war system\nEach faction takes turn to move all the units.\nUnits gain AP over each round which is then use to perform special ability";
 		
 		tooltip[5]="A test level with square grid\nEach faction takes turn to move all the units.\nUnits gain AP over each round which is then use to perform special ability";
-	
+		
 		loadPara=useNGUIScene ? "NGUI" : "";
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
 	}
 	
 	void OnGUI(){

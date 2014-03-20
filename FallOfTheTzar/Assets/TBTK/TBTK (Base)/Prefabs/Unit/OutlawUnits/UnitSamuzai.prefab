@@ -2496,7 +2496,12 @@ MonoBehaviour:
   iconName: FistUp
   prefabID: 10
   unitName: Outlaw
-  desp: Description for unit....
+  desp: 'The Outlaw:
+
+
+    This revolutionary warrior moves fast and hits hard. He has a sprint ability which
+    gives him two extra movement range, as well as a blink ability which lets him
+    teleport. His attacks are effective against all units.'
   factionID: 0
   faction:
     factionID: -1

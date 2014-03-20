@@ -378,7 +378,11 @@ MonoBehaviour:
   iconName: Icon_Creep_AV1
   prefabID: 13
   unitName: Outlaw Militia
-  desp: Standard support unit, good for providing tactical support.
+  desp: 'The Militia:
+
+
+    This unit is useful for its healing capabilities. It is strong against calvalry
+    and weak against archers.'
   factionID: 0
   faction:
     factionID: -1

@@ -1,3 +1,4 @@
+#define customGui
 using UnityEngine;
 using System.Collections;
 
@@ -146,14 +147,17 @@ public class UI : MonoBehaviour {
 		buttonStyleAlt.padding=new RectOffset(0, 0, 0, 0);
 	}
 	
-	void OnGUI(){
+	void OnGUI(){///assets/NecromancerGUI
+		#if customGui 
+		GUI.skin= Resources.Load("Skins/Fantasy-Colorable") as GUISkin;
+		#endif
 		if(buttonStyle==null){
 			InitButtonStyle();
 		}
 		
 		if(!battleStarted) return;
 		
-		if(GUI.Button(new Rect(Screen.width-65, 5, 60, 60), "Pause\nMenu", buttonStyle)){
+		if(GUI.Button(new Rect(Screen.width-100, 5, 60, 60), "Pause\nMenu", buttonStyle)){
 			TogglePause();
 		}
 		

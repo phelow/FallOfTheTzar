@@ -52,7 +52,7 @@ public class UIUnitPlacement : MonoBehaviour {
 			}
 			
 			
-			if(GUI.Button(new Rect(Screen.width-65, Screen.height-65, 60, 60), "Auto\nPlace", UI.buttonStyle)){
+			if(GUI.Button(new Rect(Screen.width-100, Screen.height-65, 60, 60), "Auto\nPlace", UI.buttonStyle)){
 				UnitControl.AutoPlaceUnit();
 			}
 			
@@ -62,7 +62,7 @@ public class UIUnitPlacement : MonoBehaviour {
 			style.fontSize=16; style.normal.textColor=UI.colorH; style.alignment=TextAnchor.UpperCenter;
 			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-30, width, height), "All units had been deployed", style);
 			
-			if(GUI.Button(new Rect(Screen.width-65, Screen.height-65, 60, 60), "Start\nBattle", UI.buttonStyle)){
+			if(GUI.Button(new Rect(Screen.width-100, Screen.height-65, 60, 60), "Start\nBattle", UI.buttonStyle)){
 				if(UnitControl.GetPlayerUnitsRemainng()==1 && UnitControl.IsFactionAllUnitPlaced()){
 					GameControlTB.UnitPlacementCompleted();
 					this.enabled=false;
