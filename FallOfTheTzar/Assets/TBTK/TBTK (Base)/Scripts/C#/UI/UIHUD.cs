@@ -1,8 +1,14 @@
+#define glow
 using UnityEngine;
 using System.Collections;
 
 public class UIHUD : MonoBehaviour {
-
+#if glow
+	public bool glow = false;
+	//for manipulating gui colors
+	public Color c;
+	public Color cc;
+#endif
 	
 	private bool isPlayerTurn=false;
 	
@@ -12,6 +18,13 @@ public class UIHUD : MonoBehaviour {
 	void Start () {
 		PerkManagerTB perkManager=(PerkManagerTB)FindObjectOfType(typeof(PerkManagerTB));
 		perkManagerExist=perkManager==null ? false : true;
+
+#if glow 
+		//cache the color values
+		c = GUI.color;//cache the color
+		cc = GUI.contentColor;
+#endif
+
 	}
 	
 	// Update is called once per frame
@@ -38,7 +51,9 @@ public class UIHUD : MonoBehaviour {
 		}
 		
 		if(GameControlTB.IsPlayerTurn()){
+			glow = false;
 			isPlayerTurn=true;
+			BroadcastMessage("resetBool");
 		}
 		else{
 			isPlayerTurn=false;
@@ -75,12 +90,47 @@ public class UIHUD : MonoBehaviour {
 			PlayerHUD();
 		}
 	}
-	
+#if glow
+	public void turnoffGlow(){
+		glow =false;
+	}
+
+	public void toggleGlow(){
+		glow = true;
+
+	}
+
+#endif
 	void PlayerHUD(){
-		if(GUI.Button(new Rect(Screen.width-100, Screen.height-65, 60, 60), "Next\nTurn", UI.buttonStyle)){
-			OnEndTurnButton();
+		//TODO: Make this glow when all the units have moved
+			//The glow booolean is working, the next step is to make the button glow
+#if glow
+		if (!glow){
+			GUI.color = c;
+			GUI.contentColor = cc;
+#endif
+			if(GUI.Button(new Rect(Screen.width-100, Screen.height-65, 60, 60), "Next\nTurn", UI.buttonStyle)){
+#if glow
+				GUI.color = Color.gray;
+				GUI.contentColor = Color.white;
+				glow = false;
+#endif
+				OnEndTurnButton();
+			}
+#if glow
 		}
-		
+		else{
+			GUI.contentColor = Color.red;
+			GUI.color = Color.yellow;
+			if(GUI.Button(new Rect(Screen.width-100, Screen.height-65, 60, 60), "Next\nTurn", UI.buttonStyle)){
+				glow = false;
+				OnEndTurnButton();
+			}
+
+			GUI.color = c;
+			GUI.contentColor = cc;
+		}
+#endif
 		if(perkManagerExist){
 			if(GUI.Button(new Rect(5, Screen.height-65, 60, 60), "Perk\nMenu", UI.buttonStyle)){
 				OnPerkMenu();

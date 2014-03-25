@@ -1,12 +1,24 @@
 #define ibox
+#define window
 #define customGui
+#define mousePos
 //ibox is short for infobox, it is a suite of interface tools to make the interface easier to read
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
 public class UIOverlay : MonoBehaviour {
+	private float timeSinceCheck = 0f;
 
+	public bool messageSent = false;
+	private float posY = 0f;
+	private float posX =0f;
+
+	public static int w_width = 500;
+	public static int w_height = 160;
+#if window
+	//public Rect windowRect0 = new Rect(20, 20, w_width, w_height);
+#endif
 	#if customGui
 	public GUISkin customSkin;
 	#endif
@@ -121,7 +133,11 @@ public class UIOverlay : MonoBehaviour {
 	void Update () {
 	
 	}
-	
+
+	void resetBool(){
+		messageSent = false;
+	}
+
 	void OnGUI(){
 		//if(!battleStarted) return;
 		#if customGui
@@ -175,13 +191,102 @@ public class UIOverlay : MonoBehaviour {
 		if(tileHovered!=null) DrawHoverInfo();
 		///Draw text box with selected unit health and AP
 		#if ibox
+
+		/*
+		 * 
+	void ShowTooltip(UnitAbility ability){
+		GUIStyle style=new GUIStyle();
+		style.fontStyle=FontStyle.Bold;
+		
+		int width=500;
+		int height=160;
+		
+		
+		for(int i=0; i<3; i++) GUI.Box(new Rect(Screen.width/2-width/2, Screen.height-230, width, height), "");
+		
+		style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
+		GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-220, width, height), ability.name, style);
+		
+		style.fontSize=16;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperRight;
+		GUI.Label(new Rect(Screen.width/2-width/2-5, Screen.height-220, width, height), ability.cost+"AP", style);
+		
+		style.fontSize=16;	style.normal.textColor=UI.colorN;	style.alignment=TextAnchor.UpperCenter;	style.wordWrap=true;
+		GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-190, width, height), ability.desp, style);
+		
+		GUI.color=Color.white;
+	}
+		 * */
+
 		if(UnitControl.selectedUnit != null){ //only perform this calculation once every second
 			//get the selected unit
 			UnitTB selectedUnit=UnitControl.selectedUnit;
 			string name =selectedUnit.unitName;
 
+			GUIStyle style=new GUIStyle();
+			style.fontStyle=FontStyle.Bold;
+
+			int w=w_width;
+			int h=w_height;
+
+			style.fontSize = 20;
+
+			style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
+#if window
+			//Color c = GUI.color;
+			//GUI.color = Color.red;
+			//windowRect0 = GUI.Window(0,windowRect0,DoMyWindow, "Green Window");
+			//GUI.color = c;
+
+
+			GUI.Box(new Rect(Screen.width/2-750/2, -80, 750, h), "");
+			GUI.Label(new Rect(Screen.width/2-w/2, 0, w, h), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain, style);
+			
 			//print unit information
-			GUI.Label(new Rect(Screen.width/2-250, 0, 500, 20), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain);
+			//GUI.Label(new Rect(Screen.width/2-250, 0, 500, 20), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain);
+			if(lastCheck >= waitTime){
+				lastCheck = 0;
+				idleUnits = totalUnits;
+				//get idle units
+				//get an array of their units
+				p_units = UnitControl.GetAllUnitsOfFaction(p_factionId);
+				//loop through the array
+				foreach(UnitTB unit in p_units){
+					if(unit.AreAllActionsCompleted()){
+						idleUnits--;
+					}
+					else if(false){ //TODO: if the unit has no more moves, cannot use an ability, and cannot attack anyone
+						
+					}
+					//if a unit has moves left, or attacks left, increment idle units
+				}
+				
+			}
+			else{
+				lastCheck+=Time.deltaTime;
+			}
+			//print idle information
+			if(idleUnits ==0){
+				GUI.Label(new Rect(Screen.width/2-w/2, 25, w, h), "All units have exhausted their moves, hit the next turn.", style);
+				//only toggle glow once per turn
+				if(!messageSent){
+					BroadcastMessage("toggleGlow");
+					messageSent = true;
+				}
+				//GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20), "All units have exhausted their moves, hit the next turn.");
+			}
+			else{
+				BroadcastMessage("turnoffGlow");
+				GUI.Label(new Rect(Screen.width/2-w/2, 25, w, h), idleUnits + "/"+ totalUnits + " units still have available actions.", style);
+				
+				//GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20),idleUnits + "/"+ totalUnits + " units still have available actions.");
+			}
+
+#else
+			GUI.Box(new Rect(Screen.width/2-750/2, -80, 750, h), "");
+			GUI.Label(new Rect(Screen.width/2-w/2, 0, w, h), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain, style);
+
+			//print unit information
+			//GUI.Label(new Rect(Screen.width/2-250, 0, 500, 20), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain);
 				if(lastCheck >= waitTime){
 				lastCheck = 0;
 				idleUnits = totalUnits;
@@ -205,11 +310,15 @@ public class UIOverlay : MonoBehaviour {
 			}
 			//print idle information
 			if(idleUnits ==0){
-				GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20), "All units have exhausted their moves, hit the next turn.");
+				GUI.Label(new Rect(Screen.width/2-w/2, 25, w, h), "All units have exhausted their moves, hit the next turn.", style);
+				//GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20), "All units have exhausted their moves, hit the next turn.");
 			}
 			else{
-				GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20),idleUnits + "/"+ totalUnits + " units still have available actions.");
+				GUI.Label(new Rect(Screen.width/2-w/2, 25, w, h), idleUnits + "/"+ totalUnits + " units still have available actions.", style);
+
+				//GUI.Label (new Rect(Screen.width/2-250, 15, 500, 20),idleUnits + "/"+ totalUnits + " units still have available actions.");
 			}
+#endif
 
 		}
 		#endif
@@ -268,24 +377,78 @@ public class UIOverlay : MonoBehaviour {
 			GUIStyle style=new GUIStyle();
 			style.fontStyle=FontStyle.Bold;
 					
+#if mousePos
+			
+			int width=500;
+			int w_offset =50;
+			int height=160;
+			int h_offset = 20;
+			
+
+			//get pos X and Y once every second to prevent flicker
+			timeSinceCheck += Time.deltaTime;
+			if(timeSinceCheck > 0.25){
+				timeSinceCheck = 0;
+				 posY = Input.mousePosition.y;
+				 posX = Input.mousePosition.x;
+			}
+			
+			/*for(int i=0; i<3; i++) GUI.Box(new Rect(posX-(width+w_offset)/2, posY-230, width+w_offset, height), "");
+			
+			style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
+			GUI.Label(new Rect(posX-width/2, posY-240, width, height), ability.name, style);
+			
+			style.fontSize=16;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperRight;
+			GUI.Label(new Rect(posX-width/2-5, posY-240, width, height), ability.cost+"AP", style);
+			
+			style.fontSize=16;	style.normal.textColor=UI.colorN;	style.alignment=TextAnchor.UpperCenter;	style.wordWrap=true;
+			GUI.Label(new Rect(posX-width/2, posY-190, width, height), ability.desp, style);
+			
+			GUI.color=Color.white;*/
+
+			//for(int i=0; i<3; i++) GUI.Box(new Rect(posX-(width +w_offset)/2, posY, width+w_offset, height), "");
+
+
+				GUI.Box(new Rect(posX-(width/2)/2, Screen.height-posY, width/2, height-20), ""); // to remove flicker comment out this line
+
+				style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
+				GUI.Label(new Rect(posX-(width)/2, Screen.height-posY+h_offset, width, height), "Attack", style);
+				
+				if(cost>0){
+					style.fontSize=16;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperRight;
+					GUI.Label(new Rect(posX-width/2-5, Screen.height-posY+h_offset, width, height), cost+"AP", style);
+				}
+				
+				//reposition to be at location of mouse
+				style.fontSize=16;	style.normal.textColor=UI.colorN;	style.alignment=TextAnchor.UpperCenter;	style.wordWrap=true;
+				GUI.Label(new Rect(posX-width/2, Screen.height-posY+20+h_offset, width, height), text, style);	
+				if(counter){
+					style.fontSize=14;	style.normal.textColor=UI.colorH;	style.wordWrap=false;
+					GUI.Label(new Rect(posX-width/2, Screen.height-posY+40+h_offset, width, height), "Target will counter attack", style);
+				}
+
+#else
+
 			int width=500;
 			int height=160;
 			for(int i=0; i<3; i++) GUI.Box(new Rect(Screen.width/2-width/2, Screen.height-230, width, height), "");
 			
 			style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
-			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-220, width, height), "Attack", style);
+			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-240, width, height), "Attack", style);
 			
 			if(cost>0){
 				style.fontSize=16;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperRight;
 				GUI.Label(new Rect(Screen.width/2-width/2-5, Screen.height-220, width, height), cost+"AP", style);
 			}
-			
+
+			//reposition to be at location of mouse
 			style.fontSize=16;	style.normal.textColor=UI.colorN;	style.alignment=TextAnchor.UpperCenter;	style.wordWrap=true;
-			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-190, width, height), text, style);
+			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-190, width, height), text, style);	
 			if(counter){
 				style.fontSize=14;	style.normal.textColor=UI.colorH;	style.wordWrap=false;
 				GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-120, width, height), "Target will counter attack", style);
 			}
+#endif
 			
 			GUI.color=Color.white;
 		}
@@ -313,10 +476,22 @@ public class UIOverlay : MonoBehaviour {
 				
 				float widthMin=0; float widthMax=0;
 				style.CalcMinMaxWidth(cont, out widthMin, out widthMax);
+#if ibox
+#else
 				GUI.Box(new Rect(screenPos.x-widthMax-50, screenPos.y-50, widthMax+25, 22), "");
 				GUI.Label(new Rect(screenPos.x-widthMax-50, screenPos.y-50, widthMax+25-4, 20), text, style);
+#endif
 			}
 		}
 		
 	}
+
+	// Make the contents of the window
+	/*void DoMyWindow(int windowID) {
+		if (GUI.Button(new Rect(10, 20, 100, 20), "Hello World"))
+			print("Got a click in window with color " + GUI.color);
+		
+		GUI.DragWindow(new Rect(0, 0, 10000, 10000));
+	}*/
+
 }
