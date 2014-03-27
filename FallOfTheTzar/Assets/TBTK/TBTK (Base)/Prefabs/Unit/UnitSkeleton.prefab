@@ -104,7 +104,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 5
   pointReward: 0
-  fullHP: 10
+  fullHP: 15
   HP: 10
   fullAP: 20
   AP: 0
@@ -133,12 +133,12 @@ MonoBehaviour:
   meleeDamageMin: 4
   meleeDamageMax: 10
   counterDmgModifier: 1
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
   armorType: 6
-  defend: .0500000007
+  defend: .100000001
   critDef: 0
   damageReduc: 0
   APCostAttack: 1

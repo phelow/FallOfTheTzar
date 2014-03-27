@@ -523,7 +523,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 7
   pointReward: 7
-  fullHP: 12
+  fullHP: 13
   HP: 10
   fullAP: 5
   AP: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .75
   attMelee: .899999976
   criticalRange: 0
   criticalMelee: .100000001
