@@ -1,4 +1,6 @@
 #define ibox
+//#define mo
+//mo stands for mouseover and is a tool which shows AP and HP when a unit is moused over
 #define window
 #define customGui
 #define mousePos
@@ -240,7 +242,23 @@ public class UIOverlay : MonoBehaviour {
 
 			GUI.Box(new Rect(Screen.width/2-750/2, -80, 750, h), "");
 			GUI.Label(new Rect(Screen.width/2-w/2, 0, w, h), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain, style);
-			
+#if mo
+			if(timeSinceCheck > .25){
+				//TODO: This method is not efficient, change it later
+				//get the unit position
+					//get the gameObject first
+				GameObject g = selectedUnit.thisObj;
+				//get the camera
+				Camera c = GameObject.Find("MainCamera").GetComponent<Camera>();
+				Vector3 screenPos = camera.WorldToScreenPoint(g.transform.position);
+
+			Debug.Log (screenPos.x + " : " + screenPos.y);
+				//put a simplified version of the ibox at the unit position
+				GUI.Box(new Rect(screenPos.x, screenPos.y, 100, 30), "");
+				GUI.Label(new Rect(screenPos.x, screenPos.y, 100, 30), " HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP, style);
+			}
+#endif
+
 			//print unit information
 			//GUI.Label(new Rect(Screen.width/2-250, 0, 500, 20), name+" HP:"+selectedUnit.HP+" AP:"+selectedUnit.AP+" Remaining Moves:"+selectedUnit.moveRemain +" Remaining Attacks: " +selectedUnit.attackRemain);
 			if(lastCheck >= waitTime){
