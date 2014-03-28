@@ -156,10 +156,11 @@ public class UI : MonoBehaviour {
 		}
 		
 		if(!battleStarted) return;
-		
+#if pause
 		if(GUI.Button(new Rect(Screen.width-100, 5, 60, 60), "Pause\nMenu", buttonStyle)){
 			TogglePause();
 		}
+#endif
 		
 		if(pause) PauseMenu();
 		else{

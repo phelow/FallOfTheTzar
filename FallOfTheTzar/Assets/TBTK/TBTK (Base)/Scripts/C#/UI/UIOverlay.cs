@@ -173,6 +173,8 @@ public class UIOverlay : MonoBehaviour {
 			GUI.color=new Color(.5f, .5f, .5f, 1);
 			GUI.DrawTexture(new Rect(startPosX-1, startPosY-1, length+2, 2*height+2), UI.texBar);
 			GUI.color=Color.green;
+			//TODO: Add the numbers for AP and HP here, we have startpos X and Y, and other values
+			//are calculated elsewhere
 			GUI.DrawTexture(new Rect(startPosX, startPosY, hpRatio, height), UI.texBar);
 			//GUI.Label(new Rect(screenPos.x, screenPos.y, 500, 500), "5555");
 			GUI.color=new Color(0f, 1f, 1f, 1);
@@ -427,7 +429,7 @@ public class UIOverlay : MonoBehaviour {
 			//for(int i=0; i<3; i++) GUI.Box(new Rect(posX-(width +w_offset)/2, posY, width+w_offset, height), "");
 
 
-				GUI.Box(new Rect(posX-(width/2)/2, Screen.height-posY, width/2, height-20), ""); // to remove flicker comment out this line
+				GUI.Box(new Rect(posX-(width/2)/2, Screen.height-posY+40, width/2, height+20), ""); // to remove flicker comment out this line
 
 				style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
 				GUI.Label(new Rect(posX-(width)/2, Screen.height-posY+h_offset, width, height), "Attack", style);
