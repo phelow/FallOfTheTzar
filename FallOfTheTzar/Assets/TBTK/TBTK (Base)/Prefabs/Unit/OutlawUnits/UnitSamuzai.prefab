@@ -2516,16 +2516,16 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 5
   pointReward: 0
-  fullHP: 10
+  fullHP: 20
   HP: 10
-  fullAP: 10
+  fullAP: 15
   AP: 0
   HPGainMin: 1
   HPGainMax: 2
   APGainMin: 1
   APGainMax: 4
   turnPriority: 5
-  movementRange: 3
+  movementRange: 5
   sight: 5
   movePerTurn: 2
   moveRemain: 1
@@ -2545,10 +2545,10 @@ MonoBehaviour:
   meleeDamageMin: 3
   meleeDamageMax: 7
   counterDmgModifier: 1
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
-  criticalRange: .300000012
-  criticalMelee: .300000012
+  criticalRange: .400000006
+  criticalMelee: .400000006
   armorType: 6
   defend: .300000012
   critDef: 0

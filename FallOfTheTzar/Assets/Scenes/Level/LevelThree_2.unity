@@ -2784,7 +2784,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -3708,7 +3708,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -11164,7 +11164,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -21378,7 +21378,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -26496,7 +26496,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -28686,16 +28686,16 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 5
   pointReward: 0
-  fullHP: 10
+  fullHP: 20
   HP: 10
-  fullAP: 10
+  fullAP: 15
   AP: 0
   HPGainMin: 1
   HPGainMax: 2
   APGainMin: 1
   APGainMax: 4
   turnPriority: 5
-  movementRange: 3
+  movementRange: 5
   sight: 5
   movePerTurn: 2
   moveRemain: 1
@@ -28715,10 +28715,10 @@ MonoBehaviour:
   meleeDamageMin: 3
   meleeDamageMax: 7
   counterDmgModifier: 1
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
-  criticalRange: .300000012
-  criticalMelee: .300000012
+  criticalRange: .400000006
+  criticalMelee: .400000006
   armorType: 6
   defend: .300000012
   critDef: 0
@@ -31310,7 +31310,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -33148,7 +33148,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -35546,7 +35546,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -38505,7 +38505,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 7
   pointReward: 7
-  fullHP: 12
+  fullHP: 13
   HP: 10
   fullAP: 5
   AP: 0
@@ -38534,7 +38534,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .75
   attMelee: .899999976
   criticalRange: 0
   criticalMelee: .100000001
@@ -40135,7 +40135,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -44450,7 +44450,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -44817,7 +44817,7 @@ MonoBehaviour:
   APGainMax: 2
   turnPriority: 3
   movementRange: 2
-  sight: 99
+  sight: 20
   movePerTurn: 1
   moveRemain: 1
   attackPerTurn: 1
@@ -44836,7 +44836,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -46767,7 +46767,7 @@ MonoBehaviour:
   APGainMax: 2
   turnPriority: 3
   movementRange: 2
-  sight: 99
+  sight: 20
   movePerTurn: 1
   moveRemain: 1
   attackPerTurn: 1
@@ -46786,7 +46786,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -53303,7 +53303,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -56278,7 +56278,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -61169,7 +61169,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 7
   pointReward: 7
-  fullHP: 12
+  fullHP: 13
   HP: 10
   fullAP: 5
   AP: 0
@@ -61198,7 +61198,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .75
   attMelee: .899999976
   criticalRange: 0
   criticalMelee: .100000001
@@ -61767,35 +61767,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1569163218}
+  - {fileID: 634277864}
+  - {fileID: 1086413777}
   - {fileID: 1495587345}
   - {fileID: 2106829052}
-  - {fileID: 1086413777}
-  - {fileID: 634277864}
-  - {fileID: 393448838}
   - {fileID: 549170619}
   - {fileID: 751399601}
+  - {fileID: 393448838}
   - {fileID: 904419448}
-  - {fileID: 663553361}
-  - {fileID: 988965151}
-  - {fileID: 2093714611}
   - {fileID: 1827821462}
-  - {fileID: 1513221333}
-  - {fileID: 603103375}
+  - {fileID: 988965151}
+  - {fileID: 663553361}
+  - {fileID: 2093714611}
   - {fileID: 1634105677}
   - {fileID: 1253187250}
+  - {fileID: 448776561}
+  - {fileID: 1513221333}
+  - {fileID: 603103375}
   - {fileID: 1733663623}
   - {fileID: 64412893}
   - {fileID: 526691816}
-  - {fileID: 448776561}
   - {fileID: 1228892727}
-  - {fileID: 42916221}
   - {fileID: 2086980805}
   - {fileID: 1901168809}
+  - {fileID: 42916221}
   - {fileID: 198367713}
-  - {fileID: 2145206493}
   - {fileID: 778983295}
-  - {fileID: 752172377}
   - {fileID: 1152021100}
+  - {fileID: 2145206493}
+  - {fileID: 752172377}
   - {fileID: 1757196389}
   - {fileID: 488953016}
   m_Father: {fileID: 76090304}
@@ -65049,7 +65049,7 @@ MonoBehaviour:
   APGainMax: 2
   turnPriority: 3
   movementRange: 2
-  sight: 99
+  sight: 20
   movePerTurn: 1
   moveRemain: 1
   attackPerTurn: 1
@@ -65068,7 +65068,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -69193,7 +69193,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -70196,7 +70196,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -81128,7 +81128,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 7
   pointReward: 7
-  fullHP: 12
+  fullHP: 13
   HP: 10
   fullAP: 5
   AP: 0
@@ -81157,7 +81157,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .75
   attMelee: .899999976
   criticalRange: 0
   criticalMelee: .100000001
@@ -82299,7 +82299,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -85183,7 +85183,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 7
   pointReward: 7
-  fullHP: 12
+  fullHP: 13
   HP: 10
   fullAP: 5
   AP: 0
@@ -85212,7 +85212,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .75
   attMelee: .899999976
   criticalRange: 0
   criticalMelee: .100000001
@@ -89511,7 +89511,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -95453,7 +95453,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -97428,9 +97428,9 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 5
   pointReward: 0
-  fullHP: 15
+  fullHP: 20
   HP: 10
-  fullAP: 5
+  fullAP: 7
   AP: 0
   HPGainMin: 0
   HPGainMax: 0
@@ -101323,7 +101323,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -105060,7 +105060,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -115854,7 +115854,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -116681,7 +116681,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
@@ -117242,7 +117242,7 @@ MonoBehaviour:
     spawnInfo: []
   pointCost: 7
   pointReward: 7
-  fullHP: 12
+  fullHP: 13
   HP: 10
   fullAP: 5
   AP: 0
@@ -117271,7 +117271,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .75
   attMelee: .899999976
   criticalRange: 0
   criticalMelee: .100000001
@@ -119532,7 +119532,7 @@ MonoBehaviour:
   APGainMax: 2
   turnPriority: 3
   movementRange: 2
-  sight: 99
+  sight: 20
   movePerTurn: 1
   moveRemain: 1
   attackPerTurn: 1
@@ -119551,7 +119551,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001

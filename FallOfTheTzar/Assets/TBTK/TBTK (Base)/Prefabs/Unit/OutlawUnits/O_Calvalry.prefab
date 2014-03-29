@@ -396,7 +396,7 @@ MonoBehaviour:
   meleeDamageMin: 2
   meleeDamageMax: 6
   counterDmgModifier: .5
-  attRange: .699999988
+  attRange: .800000012
   attMelee: .899999976
   criticalRange: .100000001
   criticalMelee: .100000001
