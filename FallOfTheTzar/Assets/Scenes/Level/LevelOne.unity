@@ -41949,7 +41949,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43ca8bb88b783124da96f28c6862cc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
   messageSent: 0
+>>>>>>> origin/NEW_UI
   customSkin: {fileID: 0}
   styleA:
     m_Name: 
