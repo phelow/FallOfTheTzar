@@ -117,24 +117,49 @@ public class UIAbilityButtons : MonoBehaviour {
 	}
 	
 	void ShowTooltip(UnitAbility ability){
+#if mousePos
 		GUIStyle style=new GUIStyle();
 		style.fontStyle=FontStyle.Bold;
 		
 		int width=500;
+		int w_offset =50;
+		int height=160;
+		float posY = Input.mousePosition.y;
+		float posX = Input.mousePosition.x;
+		
+		for(int i=0; i<3; i++) GUI.Box(new Rect(posX-(width+w_offset)/2, posY-230, width+w_offset, height), "");
+		
+		style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
+		GUI.Label(new Rect(posX-width/2, posY-240, width, height), ability.name, style);
+		
+		style.fontSize=16;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperRight;
+		GUI.Label(new Rect(posX-width/2-5, posY-240, width, height), ability.cost+"AP", style);
+		
+		style.fontSize=16;	style.normal.textColor=UI.colorN;	style.alignment=TextAnchor.UpperCenter;	style.wordWrap=true;
+		GUI.Label(new Rect(posX-width/2, posY-190, width, height), ability.desp, style);
+		
+		GUI.color=Color.white;
+#else
+		GUIStyle style=new GUIStyle();
+		style.fontStyle=FontStyle.Bold;
+		
+		int width=500;
+		int w_offset =50;
 		int height=160;
 		
 		
-		for(int i=0; i<3; i++) GUI.Box(new Rect(Screen.width/2-width/2, Screen.height-230, width, height), "");
+		for(int i=0; i<3; i++) GUI.Box(new Rect(Screen.width/2-(width+w_offset)/2, Screen.height-230, width+w_offset, height), "");
 		
 		style.fontSize=20;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperCenter;
-		GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-220, width, height), ability.name, style);
+		GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-240, width, height), ability.name, style);
 		
 		style.fontSize=16;	style.normal.textColor=UI.colorH;	style.alignment=TextAnchor.UpperRight;
-		GUI.Label(new Rect(Screen.width/2-width/2-5, Screen.height-220, width, height), ability.cost+"AP", style);
+		GUI.Label(new Rect(Screen.width/2-width/2-5, Screen.height-240, width, height), ability.cost+"AP", style);
 		
 		style.fontSize=16;	style.normal.textColor=UI.colorN;	style.alignment=TextAnchor.UpperCenter;	style.wordWrap=true;
 		GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-190, width, height), ability.desp, style);
 		
 		GUI.color=Color.white;
+#endif
 	}
 }
