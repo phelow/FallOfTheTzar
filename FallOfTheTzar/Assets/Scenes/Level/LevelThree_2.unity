@@ -61767,35 +61767,35 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1569163218}
-  - {fileID: 634277864}
-  - {fileID: 1086413777}
   - {fileID: 1495587345}
   - {fileID: 2106829052}
+  - {fileID: 1086413777}
+  - {fileID: 634277864}
+  - {fileID: 393448838}
   - {fileID: 549170619}
   - {fileID: 751399601}
-  - {fileID: 393448838}
   - {fileID: 904419448}
-  - {fileID: 1827821462}
-  - {fileID: 988965151}
   - {fileID: 663553361}
+  - {fileID: 988965151}
   - {fileID: 2093714611}
-  - {fileID: 1634105677}
-  - {fileID: 1253187250}
-  - {fileID: 448776561}
+  - {fileID: 1827821462}
   - {fileID: 1513221333}
   - {fileID: 603103375}
+  - {fileID: 1634105677}
+  - {fileID: 1253187250}
   - {fileID: 1733663623}
   - {fileID: 64412893}
   - {fileID: 526691816}
+  - {fileID: 448776561}
   - {fileID: 1228892727}
+  - {fileID: 42916221}
   - {fileID: 2086980805}
   - {fileID: 1901168809}
-  - {fileID: 42916221}
   - {fileID: 198367713}
-  - {fileID: 778983295}
-  - {fileID: 1152021100}
   - {fileID: 2145206493}
+  - {fileID: 778983295}
   - {fileID: 752172377}
+  - {fileID: 1152021100}
   - {fileID: 1757196389}
   - {fileID: 488953016}
   m_Father: {fileID: 76090304}
@@ -112168,6 +112168,79 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1631523796}
   m_GameObject: {fileID: 2017233320}
   m_Mesh: {fileID: 4300000, guid: b40e73861f275854da0715267a089c07, type: 3}
+--- !u!1 &2017432386
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 2017432388}
+  - 114: {fileID: 2017432387}
+  m_Layer: 0
+  m_Name: Dialogue Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2017432387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2017432386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1229025713, guid: b5a7519e94754fb4a8ea0c272031db78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialDatabase: {fileID: 0}
+  displaySettings:
+    dialogueUI: {fileID: 0}
+    localizationSettings:
+      language: 
+      useSystemLanguage: 0
+    subtitleSettings:
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      richTextEmphases: 0
+      informSequenceStartAndEnd: 0
+    cameraSettings:
+      sequencerCamera: {fileID: 0}
+      cameraAngles: {fileID: 0}
+      defaultSequence: Camera(Closeup); required Camera(Closeup,listener)@{{end}}
+    inputSettings:
+      alwaysForceResponseMenu: 1
+      responseTimeout: 0
+      responseTimeoutAction: 0
+      qteButtons:
+      - Fire1
+      - Fire2
+      cancel:
+        key: 27
+        buttonName: 
+    alertSettings:
+      allowAlertsDuringConversations: 0
+      alertCheckFrequency: 0
+  debugLevel: 2
+  dontDestroyOnLoad: 1
+  allowOnlyOneInstance: 1
+--- !u!4 &2017432388
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2017432386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &2018877213
 GameObject:
   m_ObjectHideFlags: 0
