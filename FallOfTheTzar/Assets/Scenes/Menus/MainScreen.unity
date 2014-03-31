@@ -236,7 +236,7 @@ MonoBehaviour:
   - Continue Campaign
   - Level Select
   levelLoad:
-  - Level_1
+  - LevelOne
   - Continue
   - LevelSelect
   menuItems: 3

@@ -435,7 +435,7 @@ MonoBehaviour:
   critDef: 0
   damageReduc: 0
   APCostAttack: 1
-  APCostMove: 1
+  APCostMove: 0
   waitingTime: 0
   waitedTime: 0
   baseTurnPriority: 0

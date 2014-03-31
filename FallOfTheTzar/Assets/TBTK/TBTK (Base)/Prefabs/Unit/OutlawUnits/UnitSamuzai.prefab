@@ -2495,7 +2495,7 @@ MonoBehaviour:
   icon: {fileID: 2800000, guid: 619f297bf6c0c7841bbebf4bd95da11c, type: 3}
   iconName: FistUp
   prefabID: 10
-  unitName: Outlaw
+  unitName: Brezhnev
   desp: 'The Outlaw:
 
 
@@ -2554,7 +2554,7 @@ MonoBehaviour:
   critDef: 0
   damageReduc: 0
   APCostAttack: 1
-  APCostMove: 1
+  APCostMove: 0
   waitingTime: 0
   waitedTime: 0
   baseTurnPriority: 0
