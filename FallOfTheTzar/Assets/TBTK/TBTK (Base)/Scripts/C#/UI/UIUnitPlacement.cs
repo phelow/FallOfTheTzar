@@ -39,7 +39,7 @@ public class UIUnitPlacement : MonoBehaviour {
 			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-150, width, height), sUnit.desp, style);
 			
 			style.fontSize=16; style.normal.textColor=UI.colorH; style.wordWrap=false;
-			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-30, width, height), "Unit remained to be deployed: "+list.Count, style);
+			GUI.Label(new Rect(Screen.width/2-width/2, Screen.height-30, width, height), "Units to be deployed: "+list.Count, style);
 			
 			
 			GUI.color=Color.white;
@@ -47,7 +47,7 @@ public class UIUnitPlacement : MonoBehaviour {
 			if(GUI.Button(new Rect(Screen.width/2-width/2+10, Screen.height-50, 50, 40), "<<-", UI.buttonStyle)){
 				UnitControl.PrevUnitPlacementID();
 			}
-			if(GUI.Button(new Rect(Screen.width/2+width/2-60, Screen.height-50, 50, 40), "->>", UI.buttonStyle)){
+			if(GUI.Button(new Rect(Screen.width/2+width/2-100, Screen.height-50, 50, 40), "->>", UI.buttonStyle)){
 				UnitControl.NextUnitPlacementID();
 			}
 			

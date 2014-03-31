@@ -112,6 +112,7 @@ public class UI : MonoBehaviour {
 	
 	
 	void TogglePause(){
+#if pauseEnabled
 		if(!pause){
 			pause=true;
 			Time.timeScale=0;
@@ -130,6 +131,7 @@ public class UI : MonoBehaviour {
 			//uiPerkMenu.enabled=true;
 			//uiPerkMenu.isOn=true;
 		}
+#endif
 	}
 	
 	public static void OnPerkMenu(){
@@ -156,10 +158,11 @@ public class UI : MonoBehaviour {
 		}
 		
 		if(!battleStarted) return;
-		
+#if pause
 		if(GUI.Button(new Rect(Screen.width-100, 5, 60, 60), "Pause\nMenu", buttonStyle)){
 			TogglePause();
 		}
+#endif
 		
 		if(pause) PauseMenu();
 		else{
