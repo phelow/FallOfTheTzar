@@ -23,7 +23,7 @@ Platform assembly: C:\Users\Devin\Documents\Fall of the Tzar\Fall of the Tzar_Da
 Loading C:\Users\Devin\Documents\Fall of the Tzar\Fall of the Tzar_Data\Managed\KopiLuaInterface.dll into Unity Child Domain
 Platform assembly: C:\Users\Devin\Documents\Fall of the Tzar\Fall of the Tzar_Data\Managed\NGUI.dll (this message is harmless)
 Loading C:\Users\Devin\Documents\Fall of the Tzar\Fall of the Tzar_Data\Managed\NGUI.dll into Unity Child Domain
-- Completed reload, in  0.073 seconds
+- Completed reload, in  0.094 seconds
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -33,15 +33,9 @@ CurrentLevel:LevelOne
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 0.446068 ms
-Unloading 6 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 0.358467 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 3306.
-Total: 3.340564 ms (FindLiveObjects: 0.114724 ms CreateObjectMapping: 0.032621 ms MarkObjects: 2.167298 ms  DeleteObjects: 0.034820 ms)
-
-HandleD3DDeviceLost
-  HandleD3DDeviceLost: still lost
-Skipped frame because GfxDevice is in invalid state (device lost)
- 
-(Filename:  Line: 1650)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 466.
+Total: 1.105091 ms (FindLiveObjects: 0.019792 ms CreateObjectMapping: 0.012462 ms MarkObjects: 0.227615 ms  DeleteObjects: 0.020525 ms)
 
