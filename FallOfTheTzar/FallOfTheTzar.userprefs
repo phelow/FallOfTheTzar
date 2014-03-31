@@ -1,7 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIOverlay.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitTB.cs">
     <Files>
+<<<<<<< HEAD
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIOverlay.cs" Line="263" Column="54" />
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIOverlay.cs" Line="263" Column="54" />
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIHUD.cs" Line="37" Column="23" />
@@ -10,6 +11,9 @@
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIPerkMenu.cs" Line="5" Column="2" />
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitTB.cs" Line="384" Column="21" />
       <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UI\UIUnitPlacement.cs" Line="38" Column="74" />
+=======
+      <File FileName="Assets\TBTK\TBTK (Base)\Scripts\C#\UnitTB.cs" Line="116" Column="1" />
+>>>>>>> 0db72d1405021fa7d10471cbe4fa950f7c60e245
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
